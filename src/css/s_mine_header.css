@@ -19,13 +19,14 @@
     height: 2.2rem;
     /* border: 1px solid black; */
     font-size: 0.24rem;
-    background: url('../img/s_mine_img/images.png') no-repeat 0.3rem 0rem,
+    background: url('../img/s_mine_img/images.png') no-repeat 0.3rem 0.4rem,
     url('../img/s_mine_img/san.png') no-repeat 7rem 0.5rem;
     background-size: 1.2rem 1.2rem, 0.12rem, 0.2rem;
     text-indent: 2.1rem;
 }
 .s_mine_header_las h2{
-    margin-top: 0.5rem;
+    padding-top: 0.55rem;
+    margin-bottom: 0.1rem;
     font-size: 0.38rem;
     font-weight: bold;
 }
@@ -34,7 +35,7 @@
     background-size: 0.14rem 0.22rem;
     text-indent: 2.25rem;
 }
-/* s_mine_instruc */
+/* ----- s_mine_instruc ----- */
 .s_mine_instruc{
     width: 100%;
     height: 1.68rem;
