@@ -1,16 +1,20 @@
 <template>
     <div class="find">
-        <h1>{{ msg }}</h1>
+        <find-info></find-info>
     </div>
 </template>
 
 <script>
+    import findInfo from './find_info.vue'
     export default {
         name: "find",
         data () {
             return {
                 msg: "发现"
             }
+        },
+        components: {
+            findInfo
         }
     }
 </script>

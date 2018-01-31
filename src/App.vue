@@ -2,10 +2,22 @@
   <div id="app">
     <router-view></router-view>
     <div class="tabbar">
-      <router-link to="/sale">外卖</router-link>
-      <router-link to="/find">发现</router-link>
-      <router-link to="/order">订单</router-link>
-      <router-link to="/mine">我的</router-link>
+      <router-link to="/sale" class="z_sale">
+        <img src="./img/z_under_img/home1.png" alt="">
+        外卖
+      </router-link>
+      <router-link to="/find" class="z_find">
+        <img src="./img/z_under_img/faxian.png" alt="">
+        发现
+      </router-link>
+      <router-link to="/order" class="z_order">
+        <img src="./img/z_under_img/dingdan.png" alt="">
+        订单
+      </router-link>
+      <router-link to="/mine" class="z_mine">
+        <img src="./img/z_under_img/main.png" alt="">
+        我的
+      </router-link>
     </div>
   </div>
 </template>
@@ -17,16 +29,5 @@ export default {
 </script>
 
 <style>
-  #app .tabbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: pink;
-  }
-
+  @import './css/z_app_vue.css';
 </style>

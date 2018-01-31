@@ -1,0 +1,26 @@
+.z_findinfo{
+    width: 7.5rem;
+}
+
+.z_find_header{
+    background-color: #00a0ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.9rem;
+}
+
+.z_find_header>h2{
+    font-size: 0.32rem;
+    text-align: center;
+    color: #fff;
+}
+
+.z_find_header>h2>span{
+    float: left;
+    width: 0.2rem;
+    height: 0.3rem;
+    background: url(../img//z_find_img/left.gif) ;
+}
+
