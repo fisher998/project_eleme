@@ -1,5 +1,10 @@
 .z_findinfo{
     width: 7.5rem;
+    /* height: 0.9rem; */
+}
+
+.z_find_head{
+    width: 100%;
     height: 0.9rem;
 }
 
@@ -10,6 +15,7 @@
     left: 0;
     right: 0;
     height: 0.9rem;
+    line-height: 0.9rem;
     border-bottom: 0.02rem solid #eeeeee;
 }
 
@@ -22,6 +28,7 @@
 .z_find_header>h2>span{
     float: left;
     margin-left: 0.33rem;
+    margin-top: 0.27rem;
     width: 0.2rem;
     height: 0.3rem;
     background: url(../img//z_find_img/left.gif) no-repeat left center;
@@ -44,11 +51,49 @@
     width: 3.74rem;
     height: 4.78rem;
     border-left: 0.01rem solid #ededed;
-    background-color: blue;
 }
 
 .z_nav_left_top{
     height: 3.19rem;
     border-bottom: 0.01rem solid #ededed;
     background: red;
+}
+.z_nav_left_top>img{
+    width: 3.74rem;
+    height: 3.19rem;
+}
+
+.z_nav_right_top>img{
+    width: 3.74rem;
+    height: 1.59rem;
+}
+
+.z_nav_right_center>img{
+    width: 3.74rem;
+    height: 1.59rem;
+}
+
+.z_nav_right_bottom>img{
+    width: 3.74rem;
+    height: 1.59rem;
+}
+
+.z_nav_left_bottom>img{
+    width: 3.74rem;
+    height: 1.59rem;
+}
+
+
+.z_banner{
+    width: 100%;
+    height: 2.28rem;
+    background: #f5f5f5;
+    border-top: 0.02rem solid #ededed;
+    border-bottom: 0.02rem solid #ededed;
+}
+
+.z_banner>img{
+    width: 100%;
+    height: 1.8rem;
+    padding-top: 0.28rem;
 }

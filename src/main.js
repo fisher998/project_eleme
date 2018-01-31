@@ -22,13 +22,13 @@ new Vue({
 
 
 var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
-        var per = clientWidth / 750;
-        document.documentElement.style.fontSize = per * 100 + "px";
+  var per = clientWidth / 750;
+  document.documentElement.style.fontSize = per * 100 + "px";
 
-        window.onresize = function () {
-            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
-            //计算比例
-            var per = clientWidth / 750;
+  window.onresize = function () {
+      var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      //计算比例
+      var per = clientWidth / 750;
 
-            document.documentElement.style.fontSize = per* 100 +"px";
-        }
+      document.documentElement.style.fontSize = per* 100 +"px";
+}
