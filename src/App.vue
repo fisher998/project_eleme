@@ -22,10 +22,11 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 16vw;
+    height: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: pink;
   }
+
 </style>
