@@ -1,12 +1,14 @@
 <template>
     <div class="mine">
         <sMineHeader></sMineHeader>
+        <sMineList></sMineList>
     </div>
 </template>
 
 <script>
 // 导入子组件的header文件
 import sMineHeader from './s_mine_header.vue'
+import sMineList from './s_mine_list.vue'
     export default {
         name: "mine",
         data () {
@@ -16,7 +18,8 @@ import sMineHeader from './s_mine_header.vue'
         },
         components: {
             // 用的的子组件
-            sMineHeader
+            sMineHeader,
+            sMineList
 
         }
     }
