@@ -82,11 +82,12 @@ export default {
 <style lang="css" scoped>
     .L_sale_navlist_wrap{
         width: 100%;
-        overflow: hidden;       
+        overflow: hidden; 
+        margin:0 0 .6rem 0;      
     }
     .L_sale_navlist_wrap a{
         width: 20%;
-        height: 1.6rem;        
+        height: 1.65rem;        
         background:white;
        
         margin-top: 0.1rem;
@@ -95,11 +96,12 @@ export default {
     .L_sale_navlist_wrap dl dd{
         text-align: center;
         margin: 0;
+        color: #666666;
     }
     .L_sale_navlist_wrap dl img{
         width: 0.89rem;
         height: 0.89rem;
-        margin: 0 auto;
+        margin: .22rem auto;
 
     }
     .L_userZX{
