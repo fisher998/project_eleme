@@ -8,14 +8,8 @@
             </div>
         </div>
         <div class="s_mine_instruc">
-            <p>
-                <img src="../img/s_mine_img/red.png" alt="">
-                红包
-            </p>
-             <p>
-                <img src="../img/s_mine_img/green.png" alt="">
-                金币
-            </p>
+            <p @click='s_mine_instruc_red'><img src="../img/s_mine_img/red.png" alt="">红包</p>
+            <p><img src="../img/s_mine_img/green.png" alt="">金币 </p>
         </div>
     </div>
 </template>
@@ -26,6 +20,11 @@
         data () {
             return {
                 msg: "我的"
+            }
+        },
+        methods: {
+            s_mine_instruc_red() {
+                console.log(123);
             }
         }
     }
