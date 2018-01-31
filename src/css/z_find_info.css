@@ -1,5 +1,6 @@
 .z_findinfo{
     width: 7.5rem;
+    height: 0.9rem;
 }
 
 .z_find_header{
@@ -9,6 +10,7 @@
     left: 0;
     right: 0;
     height: 0.9rem;
+    border-bottom: 0.02rem solid #eeeeee;
 }
 
 .z_find_header>h2{
@@ -19,8 +21,34 @@
 
 .z_find_header>h2>span{
     float: left;
+    margin-left: 0.33rem;
     width: 0.2rem;
     height: 0.3rem;
-    background: url(../img//z_find_img/left.gif) ;
+    background: url(../img//z_find_img/left.gif) no-repeat left center;
 }
 
+.z_nav{
+    width: 100%;
+    height: 4.78rem;
+}
+
+.z_nav_left{
+    float: left;
+    width: 3.74rem;
+    height: 4.78rem;
+    border-right: 0.01rem solid #ededed;
+}
+
+.z_nav_right{
+    float: right;
+    width: 3.74rem;
+    height: 4.78rem;
+    border-left: 0.01rem solid #ededed;
+    background-color: blue;
+}
+
+.z_nav_left_top{
+    height: 3.19rem;
+    border-bottom: 0.01rem solid #ededed;
+    background: red;
+}
