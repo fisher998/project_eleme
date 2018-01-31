@@ -1,0 +1,17 @@
+#app .tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 0.1px;
+  }
+  .z_sale>img,.z_find>img,.z_order>img,.z_mine>img{
+    width: 0.37rem;
+    height: 0.37rem;
+    margin: 0 auto 0.05rem auto;
+  }

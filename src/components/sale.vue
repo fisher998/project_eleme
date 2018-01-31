@@ -1,5 +1,5 @@
 <template>
-
+    
     <div class="sale">
         <h1>{{ msg }}</h1>
     </div>
