@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import findInfo from './find_info.vue'
+    import findInfo from './z_find_info.vue'
     export default {
         name: "find",
         data () {
