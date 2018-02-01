@@ -1,14 +1,12 @@
 .z_temp_header{
     width: 100%;
-    height: 1.33rem;
-    background: red;
     padding-top: 0.1px;
 }
 
 .z_temp_header>h3{
     font-size: 0.34rem;
     font-weight: bold;
-    text-indent: 0.82em;
+    text-indent: 0.2rem;
     width: 2.72rem;
     height: 0.38rem;
     margin: 0.43rem auto 0.04rem auto;
@@ -40,4 +38,86 @@
     background: url(../img/z_find_img/icon3.png) no-repeat left center;
     background-size: 0.32rem 0.32rem;
     margin-left: 0.03rem;
-  }
+}
+
+.z_battle{
+    color: #98999d;
+    font-size: 0.24rem;
+    text-align: center;
+}
+
+.z_shop_info{
+    width: 7.08rem;
+    /* height: 5.34rem; */
+    margin: 0 auto;
+    border: 0.02rem solid #ededed;
+}
+
+.shop_info_list{
+    width: 3.45rem;
+    height: 4.82rem;
+    margin-bottom: 0.18rem;
+}
+.shop_info_list:nth-of-type(odd){
+    float: left;
+    margin-left: 0.02rem;
+}
+
+.shop_info_list:nth-of-type(even){
+    float: right;
+    margin-left: 0.02rem;
+}
+
+.shop_info_list:nth-of-type(odd)>figure>img{
+    width: 3.41rem;
+    height: 3.45rem;
+}
+
+.shop_info_list:nth-of-type(even)>figure>img{
+    width: 3.41rem;
+    height: 3.45rem;
+}
+
+.z_list_info{
+    padding: 0 0.2rem;
+}
+
+.z_list_info_title{
+    font-size: 0.28rem;
+}
+
+.z_sale{
+    color: #68656c;
+    font-size: 0.18rem;
+
+}
+
+.z_price span{
+    color: #ff6202;
+}
+.z_price span:nth-of-type(2){
+    font-size: 0.24rem;
+}
+
+.z_price>i{
+    font-style: normal;
+    font-size: 0.16rem;
+    color: #999a95;
+    text-decoration: line-through;
+}
+
+.z_shopname{
+    width: 3.06rem;
+    height: 0.68rem;
+    text-indent: 0.3rem;
+}
+.z_shopname span{
+    float: left;
+    width: 0.19rem;
+    height: 0.19rem;
+    margin-top: 0.08rem;
+    background: url(../img/z_find_img/icon3.png) no-repeat left center;
+    background-size: 0.19rem 0.19rem;
+}
+
+

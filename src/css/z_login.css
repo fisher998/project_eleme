@@ -1,0 +1,18 @@
+.z_login h1{
+    width: 2.72rem;
+    height: 0.68rem;
+    margin: 0.8rem auto 0 auto; 
+
+    background: url(../img/z_find_img/login.png) no-repeat center center;
+    background-size: 2.72rem 0.68rem;
+}
+.z_time{
+    font-size: 0.3rem;
+    text-align: center;
+    color: #1b9dff;
+    margin-top: 0.12rem;
+}
+.z_login_way{
+    margin: 0 auto;
+    
+}

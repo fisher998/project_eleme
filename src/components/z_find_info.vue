@@ -32,11 +32,14 @@
         </div>
 
         <recommend></recommend>
+        <time-gift></time-gift>
     </div>
 </template>
 
 <script>
     import recommend from './z_find_info_temp'
+    import timeGift from './z_find_timegift'
+    
     export default {
         data() {
             return {
@@ -44,7 +47,8 @@
             }
         },
         components: {
-            recommend
+            recommend,
+            timeGift
         }
     }
 </script>

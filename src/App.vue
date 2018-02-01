@@ -1,33 +1,30 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <div class="tabbar">
-      <router-link to="/sale" class="z_sale">
-        <img src="./img/z_under_img/home1.png" alt="">
-        外卖
-      </router-link>
-      <router-link to="/find" class="z_find">
-        <img src="./img/z_under_img/faxian.png" alt="">
-        发现
-      </router-link>
-      <router-link to="/order" class="z_order">
-        <img src="./img/z_under_img/dingdan.png" alt="">
-        订单
-      </router-link>
-      <router-link to="/mine" class="z_mine">
-        <img src="./img/z_under_img/main.png" alt="">
-        我的
-      </router-link>
-    </div>
+    <bottom-nav v-show="isShow"></bottom-nav>
   </div>
 </template>
 
 <script>
+import bottomNav from './components/z_bottom_nav'
 export default {
   name: 'App',
+  data() {
+    return {
+      
+    }
+  },
+  components: {
+    bottomNav
+  },
+  computed: {
+    isShow() {
+      return /(sale|find|order|mine)/.test(this.$route.path) ? true : false;
+    }
+  }
 }
 </script>
 
 <style>
-  @import './css/z_app_vue.css';
+
 </style>

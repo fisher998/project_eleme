@@ -16,7 +16,6 @@
     right: 0;
     height: 0.9rem;
     line-height: 0.9rem;
-    border-bottom: 0.02rem solid #eeeeee;
 }
 
 .z_find_header>h2{
@@ -50,13 +49,11 @@
     float: right;
     width: 3.74rem;
     height: 4.78rem;
-    border-left: 0.01rem solid #ededed;
 }
 
 .z_nav_left_top{
     height: 3.19rem;
     border-bottom: 0.01rem solid #ededed;
-    background: red;
 }
 .z_nav_left_top>img{
     width: 3.74rem;
@@ -93,7 +90,7 @@
 }
 
 .z_banner>img{
-    width: 100%;
+    width: 7.5rem;
     height: 1.8rem;
     padding-top: 0.28rem;
 }

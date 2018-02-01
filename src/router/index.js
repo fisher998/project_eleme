@@ -7,7 +7,7 @@ import Find from '../components/find'
 import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
-
+import Login from '../components/z_login'
 
 
 
@@ -19,6 +19,7 @@ export default new VueRouter({
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
     { path: '/order', component: Order },
-    { path: '/sale', component: Sale }
+    { path: '/sale', component: Sale },
+    { path: '/login', component: Login }
   ]
 })
