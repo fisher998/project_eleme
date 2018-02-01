@@ -1,0 +1,102 @@
+.L_merchant_header_wrap{
+    height: 6rem;
+    /* background: pink; */
+}
+.L_merchant_header_up{
+    height: 1.36rem;
+    width: 100%;
+    background-color: #624f59;
+    position: relative;
+    float: left;
+}
+.L_merchant_header_up span:first-child{
+    display: block;
+    position: absolute;
+    background: url(../img/l_img/back.png)no-repeat left center;
+    background-size:  100% 100%;
+    top: .13rem;
+    left: .43rem;
+    width: .22rem;
+    height: .32rem;
+    font-size: 75px;
+}
+.L_merchant_header_up span:last-child{
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: url(../img/l_img/pic03.jpg)no-repeat left center;
+    background-size:  100% 100%;
+    border-radius: .04rem;
+    position: absolute;
+    left: 50%;
+    top: 0.48rem;
+    margin-left: -.65rem;
+}
+.L_merchant_header_name{
+    /* background: #2C0E14; */
+    height: 1.54rem;
+    margin: .58rem 0 0 0;
+    float: left;
+    width: 100%;
+}
+.L_merchant_header_name h3{
+    line-height: .59rem;
+    text-align: center;
+    color: #333333;
+    font-size: .41rem;
+}
+.L_merchant_header_name h3 span:first-child{
+    display: inline-block;
+    width: .72rem;
+    height: .36rem;
+    background: #ffe531;
+    color: #6a3709;
+    line-height: .36rem;
+    font-size: .2rem;
+}
+.L_PSXQ{
+    height: .41rem;
+    line-height: .41rem;
+    font-size: .17rem;
+    color: #333333;
+    text-align: center;
+    width: 100%;
+}
+.L_merchant_header_name p{
+    line-height: .41rem;
+    height: .41rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 4.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999999;
+}
+.L_shoudanHD{
+    height: .48rem;
+    margin: .12rem auto auto auto;
+    border:1px solid #eeeeee;
+    width: 6.56rem;
+    font-size: .18rem;
+    color: #666666;
+}
+.L_shoudanHD span:nth-of-type(1){
+    background: #70bc46;
+    width: .76rem;
+    height: .26rem;
+    line-height: .26rem;
+    color: white;
+    font-size: .14rem; 
+    margin:0 .12rem;   
+    text-align: center;
+}
+.L_shoudanHD h{
+    line-height: .48rem;   
+    font-size: .16rem;    
+    display: inline-block;
+}
+.L_shoudanHD span:nth-of-type(12){
+    line-height: .46rem;
+    float: right;
+}
