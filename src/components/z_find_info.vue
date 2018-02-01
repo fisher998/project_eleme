@@ -30,17 +30,22 @@
         <div class="z_banner">
             <img src="../img/z_find_img/banner.png" alt="">
         </div>
+
+        <recommend></recommend>
     </div>
 </template>
 
 <script>
+    import recommend from './z_find_info_temp'
     export default {
         data() {
             return {
 
             }
         },
-    
+        components: {
+            recommend
+        }
     }
 </script>
 
