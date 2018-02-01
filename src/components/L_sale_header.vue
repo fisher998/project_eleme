@@ -1,14 +1,19 @@
 <template>
     <div>
         <div class="L_sale_header">
+            
             <div class="L_sale_header_up">
                 <span></span>
                 <h3>东城区北京市政府</h3>
                 <span></span>
             </div>
+           
             <div class="L_sale_header_down">
                <div><span></span></div>
                <span> 搜索商店、商品名称</span>
+            </div>
+             <div class="L_XSHD">
+                <img src="../img/l_img/pic02.jpg" alt="">
             </div>
         </div>
     </div>
@@ -27,8 +32,9 @@ export default {
     
 <style lang="css" scoped>
     .L_sale_header{
-        background-color: #00a8ff;
+        /* background-color: #00a8ff; */
         overflow: hidden;
+        background-image: linear-gradient(90deg,#0af,#0085ff);
     }
     .L_sale_header_up{
         padding: 0.2rem 0.28rem 0 0.28rem;
@@ -57,6 +63,14 @@ export default {
         float: left;
         margin: .1rem;
         background: url(../img/l_img/icon.png)no-repeat left center;
+    }
+    .L_XSHD{
+        width: 100%;
+        height: 2.09rem;
+    }
+    .L_XSHD img{
+        width: 100%;
+        height: 100%;
     }
     .L_sale_header_down{
         width: 90%;

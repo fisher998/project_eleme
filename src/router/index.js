@@ -9,6 +9,10 @@ import Order from '../components/order'
 import Sale from '../components/sale'
 
 
+import LSaleMerchant from '../components/L_sale_merchant'
+
+
+
 
 
 export default new VueRouter({
@@ -19,6 +23,7 @@ export default new VueRouter({
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
     { path: '/order', component: Order },
-    { path: '/sale', component: Sale }
+    { path: '/sale', component: Sale },
+    { path: '/L_sale_merchant', component: LSaleMerchant },
   ]
 })
