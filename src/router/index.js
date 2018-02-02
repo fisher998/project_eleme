@@ -23,10 +23,7 @@ import Login from '../components/z_login'
 
 
 export default new VueRouter({
-<<<<<<< HEAD
-=======
   // 配置H5的history模式, 去掉 #/
->>>>>>> 296febe72879c2b8618fa60fd4896705764f39c5
   mode: 'history',
   routes: [
     // 这个path就是router-link里的to跳转的地址
