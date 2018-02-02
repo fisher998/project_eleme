@@ -12,10 +12,11 @@ import Login from '../components/z_login'
 
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     // 这个path就是router-link里的to跳转的地址
     // component就是根据路由的地址，找到对应的组件
-    { path: '', component: Find },
+    { path: '', redirect: '/sale' },
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
     { path: '/order', component: Order },
