@@ -20,12 +20,17 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
 
 import Login from '../components/z_login'
+import Notelogin from '../components/z_notelogin'
+import Psdlogin from '../components/z_psdlogin'
 
 
 
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
+import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 
+
+import spingjia from '../components/s_pingjia'
 
 
 
@@ -50,13 +55,30 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+<<<<<<< HEAD
+    { path: '/login', component: Login , children: [
+      { path: 'notelogin', component: Notelogin },
+      { path: 'psdlogin', component: Psdlogin },
+    ]}
+=======
 
+<<<<<<< HEAD
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
 
   
 
+=======
+    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
+      { path: '', redirect: 'diancan' },
+      { path: 'diancan', component: LSaleMerchantDiancan },
+      { path: 'pingjia', component: spingjia },
+      // {  },
+      // {  }
+    ]},
+>>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
 
     { path: '/login', component: Login }
 
+>>>>>>> 4381758db57c1d8f80e9ef4a20f50544c7f754ad
   ]
 })
