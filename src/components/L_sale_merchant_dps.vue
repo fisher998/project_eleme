@@ -2,22 +2,31 @@
     <div>
        <div class="L_sale_merchant_dps_wrap">
            <ul>
-               <li>点餐</li>
+               <router-link to="/L_sale_merchant_header/diancan">
+                    <li>点餐</li>
+               </router-link>
+               <router-link to="/L_sale_merchant_header/pingjia">
                <li>评价</li>
+               </router-link>
                <li>商家</li>
            </ul>
        </div>
+       <router-view></router-view>
+       <!-- <l-sale-merchant-diancan></l-sale-merchant-diancan> -->
     </div>
 </template>
     
 <script>
-
+import LSaleMerchantDiancan from './L_sale_merchant_diancan'
 export default {
     name: "L_sale_merchant_dps",
     data () {
         return {
              
         };
+    },
+    components:{
+        LSaleMerchantDiancan
     }
 }
 </script>
