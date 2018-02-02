@@ -19,11 +19,39 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
 
 import Login from '../components/z_login'
+<<<<<<< HEAD
+=======
+
+
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
+
+
+
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -42,10 +70,39 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
+
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
     { path: '/login', component: Login , children: [
+      { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
+<<<<<<< HEAD
     ]},
+=======
+<<<<<<< HEAD
+    ]},
+=======
+    ]}
+
+
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
     { path: '/login', component: Login , children: [
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
@@ -59,7 +116,35 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+>>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
+
+
+>>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
+
+
+
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
     { path: '/login', component: Login }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+>>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
+>>>>>>> 8f5c43cf36caa1f15674eb4c424263dc97d27660
   ]
 })
