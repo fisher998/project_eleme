@@ -19,6 +19,15 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
 import Login from '../components/z_login'
 
+<<<<<<< HEAD
+=======
+import LSaleMerchantHeader from '../components/L_sale_merchant_header'
+import LSaleMerchantDps from '../components/L_sale_merchant_dps'
+
+
+
+
+>>>>>>> a5a8407c9fad030ce054eca9887bf81ee023da8f
 
 
 
@@ -28,7 +37,7 @@ export default new VueRouter({
   routes: [
     // 这个path就是router-link里的to跳转的地址
     // component就是根据路由的地址，找到对应的组件
-    { path: '', component: Find },
+    { path: '', redirect: '/sale' },
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
       // 配置路由  s_mine_header_redPaper
@@ -40,6 +49,10 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+
+    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader },
+
     { path: '/login', component: Login }
+
   ]
 })
