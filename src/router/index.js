@@ -8,23 +8,38 @@ import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
 
-
+// 红包页面
 import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
+// 导入二级路由 sale首页的评论页面
+// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
 
 
 import Login from '../components/z_login'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 65bdb0b497981800027d95d404b905d03174af56
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 65bdb0b497981800027d95d404b905d03174af56
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -43,6 +58,22 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    { path: '/login', component: Login , children: [
+      { path: 'notelogin', component: Notelogin },
+      { path: 'psdlogin', component: Psdlogin },
+    ]}
+=======
+
+<<<<<<< HEAD
+    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
+
+  
+
+=======
+>>>>>>> 65bdb0b497981800027d95d404b905d03174af56
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
@@ -51,6 +82,11 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
+<<<<<<< HEAD
+=======
+>>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
+
+>>>>>>> 65bdb0b497981800027d95d404b905d03174af56
     { path: '/login', component: Login }
   ]
 })
