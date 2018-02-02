@@ -18,22 +18,12 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
 
 import Login from '../components/z_login'
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
 
-<<<<<<< HEAD
-=======
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
-
-
+import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
-
-
->>>>>>> a5a8407c9fad030ce054eca9887bf81ee023da8f
-
-
 
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
@@ -53,23 +43,14 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-<<<<<<< HEAD
-    { path: '/login', component: Login , children: [
-      { path: 'notelogin', component: Notelogin },
-      { path: 'psdlogin', component: Psdlogin },
-    ]}
-=======
-
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
       { path: 'pingjia', component: spingjia },
+      { path: 'merchant_shangjia', component: LMerchantShangjia },
       // {  },
       // {  }
     ]},
-
     { path: '/login', component: Login }
-
->>>>>>> 4381758db57c1d8f80e9ef4a20f50544c7f754ad
   ]
 })
