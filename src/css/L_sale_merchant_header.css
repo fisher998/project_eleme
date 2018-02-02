@@ -1,5 +1,5 @@
 .L_merchant_header_wrap{
-    height: 6rem;
+    height:4.65rem;
     /* background: pink; */
 }
 .L_merchant_header_up{
@@ -77,18 +77,19 @@
     height: .48rem;
     margin: .12rem auto auto auto;
     border:1px solid #eeeeee;
-    width: 6.56rem;
+    width: 6.7rem;
     font-size: .18rem;
     color: #666666;
 }
 .L_shoudanHD span:nth-of-type(1){
     background: #70bc46;
-    width: .76rem;
+    width: .56rem;
     height: .26rem;
+    display: inline-block;
     line-height: .26rem;
     color: white;
     font-size: .14rem; 
-    margin:0 .12rem;   
+    margin:0 0 0 .12rem;   
     text-align: center;
 }
 .L_shoudanHD h{
@@ -96,7 +97,36 @@
     font-size: .16rem;    
     display: inline-block;
 }
-.L_shoudanHD span:nth-of-type(12){
+.L_shoudanHD span:nth-of-type(2){
     line-height: .46rem;
-    float: right;
+    float: right;   
+}
+.L_shoudanHD span:nth-of-type(2) i{
+    display:inline-block;
+    width: .19rem;
+    height: .09rem;
+    background: url(../img/l_img/iconP4.jpg)no-repeat left center;
+    background-size: 100% 100%;
+    margin: 0 0 .08rem .05rem;
+}
+.L_hongbao{
+    width: 2.78rem;
+    height: .52rem;
+    color: #874519;
+    margin: .16rem auto auto auto;    
+    background:url(../img/l_img/hongbaoBG.jpg)no-repeat left center;
+    background-size: 2.78rem .52rem;
+    
+}
+.L_hongbao span:first-child{
+    width: 1.5rem;
+    line-height: .25rem;
+    color: #874519;
+    margin-left: .47rem;
+    line-height: .52rem;
+}
+.L_hongbao span:last-child{
+    width: .44rem;
+    margin-right: .09rem;
+
 }

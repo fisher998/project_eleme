@@ -288,6 +288,7 @@ export default {
         margin: 0.05rem 0.13rem 0 0;
         text-align: center;
         line-height: .26rem;
+        color: #666;
     }
     .L_xiaoliang{
         /* height: 1.05rem; */

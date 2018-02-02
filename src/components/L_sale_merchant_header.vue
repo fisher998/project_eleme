@@ -22,19 +22,28 @@
                     <span>首单</span>
                     <h>新用户下单立减17元（不与其它活动同享）</h>
                     <span>15个优惠<i></i></span>
-                </div>                   
+                </div>  
+                <div class="L_hongbao">
+                    <span>6元无门槛红包</span>
+                    <span>领取</span>
+                </div>                 
             </div>
        </div>
+       <LSaleMerchantDps></LSaleMerchantDps>
     </div>
 </template>
     
 <script>
+import LSaleMerchantDps from '../components/L_sale_merchant_dps'
 export default {
     name: "L_sale_merchant_header",
     data () {
         return {
              
         };
+    },
+    components:{
+        LSaleMerchantDps
     }
 }
 </script>

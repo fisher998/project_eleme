@@ -20,6 +20,8 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 import Login from '../components/z_login'
 
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
+import LSaleMerchantDps from '../components/L_sale_merchant_dps'
+
 
 
 
