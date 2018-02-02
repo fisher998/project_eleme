@@ -18,28 +18,12 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
 
-
 import Login from '../components/z_login'
-
-
-
-
-
-
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
-
-
-
-
-
-
-
-
-
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -58,48 +42,15 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-<<<<<<< HEAD
-
-
-
-    { path: '/login', component: Login , children: [
-      { path: 'notelogin', component: Notelogin },
-      { path: 'psdlogin', component: Psdlogin },
-    ]}
-
-
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
     { path: '/login', component: Login , children: [
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
     ]},
-
-
-
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
+    { path: '/login', component: Login , children: [
+      { path: 'notelogin', component: Notelogin },
+      { path: 'psdlogin', component: Psdlogin },
+    ]},
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
-
-  
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 65bdb0b497981800027d95d404b905d03174af56
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
@@ -108,26 +59,7 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
-
-
-
-
-
     { path: '/login', component: Login }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
   ]
 })
