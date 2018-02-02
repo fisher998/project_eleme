@@ -55,19 +55,19 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-<<<<<<< HEAD
+
     { path: '/login', component: Login , children: [
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
-    ]}
-=======
+    ]},
 
-<<<<<<< HEAD
+
+
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
 
   
 
-=======
+
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
@@ -75,10 +75,10 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
->>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
+
 
     { path: '/login', component: Login }
 
->>>>>>> 4381758db57c1d8f80e9ef4a20f50544c7f754ad
+
   ]
 })
