@@ -18,6 +18,8 @@ import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
 
 import Login from '../components/z_login'
+import Notelogin from '../components/z_notelogin'
+import Psdlogin from '../components/z_psdlogin'
 
 
 
@@ -40,6 +42,9 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-    { path: '/login', component: Login }
+    { path: '/login', component: Login , children: [
+      { path: 'notelogin', component: Notelogin },
+      { path: 'psdlogin', component: Psdlogin },
+    ]}
   ]
 })
