@@ -19,7 +19,8 @@ export default {
   },
   computed: {
     isShow() {
-      return /(sale|find|order|mine)/.test(this.$route.path) ? true : false;
+      console.log(this.$route.path);
+      return /(\/sale|\/find|\/order|\/mine)/.test(this.$route.path) ? true : false;
     }
   }
 }

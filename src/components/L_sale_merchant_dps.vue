@@ -6,9 +6,11 @@
                     <li>点餐</li>
                </router-link>
                <router-link to="/L_sale_merchant_header/pingjia">
-               <li>评价</li>
+                    <li>评价</li>
                </router-link>
-               <li>商家</li>
+               <router-link to="/L_sale_merchant_header/merchant_shangjia">
+                    <li>商家</li>
+               </router-link>
            </ul>
        </div>
        <router-view></router-view>
@@ -37,7 +39,7 @@ export default {
         padding: .21rem 0 0 0;
         border-bottom: .04rem solid #dddddd;
         line-height: .78rem;   
-        height: .95rem;   
+        height: 1.05rem;   
         text-align: center;
         font-size: .28rem;
         color: #666666;  

@@ -119,14 +119,17 @@
     
 }
 .L_hongbao span:first-child{
-    width: 1.5rem;
-    line-height: .25rem;
+    width: 1.6rem;
     color: #874519;
-    margin-left: .47rem;
+    margin-left: .35rem;
     line-height: .52rem;
+    float: left;
+    text-align: center;
 }
 .L_hongbao span:last-child{
-    width: .44rem;
-    margin-right: .09rem;
+    text-align: center;   
+    width: .69rem;
+    float: right;
+    line-height: .52rem;
 
 }
