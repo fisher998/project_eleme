@@ -11,8 +11,12 @@
            </router-link>
            <router-view></router-view>
        </div>
+       <!-- 子组件 -->
+       <SMineHeaderRedPaperRedHongbao></SMineHeaderRedPaperRedHongbao> 
     </div>
+   
 </template>
+
     
 <script>
 // s_mine_header_redPaper_red_hongbao
@@ -25,6 +29,7 @@ export default {
         };
     },
     components: {
+        // 子组件 中间 红包部分
         SMineHeaderRedPaperRedHongbao
     }
 }

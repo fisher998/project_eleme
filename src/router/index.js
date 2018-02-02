@@ -7,7 +7,7 @@ import Find from '../components/find'
 import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
-<<<<<<< HEAD
+
 
 import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 
@@ -16,9 +16,9 @@ import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
 
-=======
+
 import Login from '../components/z_login'
->>>>>>> 6bbf8e7c986d5b10ecac5853f6ca8d00127b10a1
+
 
 
 

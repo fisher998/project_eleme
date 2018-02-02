@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import SMineHeaderRedPaper from './s_mine_header_redPaper.vue'
+// import SMineHeaderRedPaper from './s_mine_header_redPaper.vue'
     export default {
         name: "mine",
         data () {
@@ -32,7 +32,7 @@ import SMineHeaderRedPaper from './s_mine_header_redPaper.vue'
             }
         },
         components: {
-            SMineHeaderRedPaper
+            // SMineHeaderRedPaper
         }
     }
 </script>
