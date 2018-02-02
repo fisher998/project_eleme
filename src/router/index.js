@@ -58,6 +58,7 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+<<<<<<< HEAD
 
 
 
@@ -68,12 +69,37 @@ export default new VueRouter({
 
 
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+    { path: '/login', component: Login , children: [
+      { path: 'notelogin', component: Notelogin },
+      { path: 'psdlogin', component: Psdlogin },
+    ]},
+
+
+
+>>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
 
   
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 65bdb0b497981800027d95d404b905d03174af56
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+>>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
@@ -82,11 +108,26 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
+>>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
 
 
 
 
 
     { path: '/login', component: Login }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
   ]
 })
