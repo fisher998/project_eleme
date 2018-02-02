@@ -32,7 +32,7 @@ export default new VueRouter({
   routes: [
     // 这个path就是router-link里的to跳转的地址
     // component就是根据路由的地址，找到对应的组件
-    { path: '', component: Find },
+    { path: '', redirect: '/sale' },
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
       // 配置路由  s_mine_header_redPaper
