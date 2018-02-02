@@ -7,7 +7,7 @@ import Find from '../components/find'
 import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
-
+import Login from '../components/z_login'
 
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 
@@ -24,6 +24,10 @@ export default new VueRouter({
     { path: '/mine', component: Mine },
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
+
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader },
+
+    { path: '/login', component: Login }
+
   ]
 })
