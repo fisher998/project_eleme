@@ -10,13 +10,15 @@
             </div>
         </div>
         <div class="s_mine_instruc">
-            <p @click='s_mine_instruc_red'><img src="../img/s_mine_img/red.png" alt="">红包</p>
+            <router-link :to="'/s_mine_header_redPaper/'"><p><img src="../img/s_mine_img/red.png" alt="">红包</p></router-link>
             <p><img src="../img/s_mine_img/green.png" alt="">金币 </p>
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
+import SMineHeaderRedPaper from './s_mine_header_redPaper.vue'
     export default {
         name: "mine",
         data () {
@@ -28,6 +30,9 @@
             s_mine_instruc_red() {
                 console.log(123);
             }
+        },
+        components: {
+            SMineHeaderRedPaper
         }
     }
 </script>
