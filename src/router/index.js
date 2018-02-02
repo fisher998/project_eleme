@@ -8,26 +8,27 @@ import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
 
-
+// 红包页面
 import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
 
+// 导入二级路由 sale首页的评论页面
+// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
 
 
 import Login from '../components/z_login'
 
-<<<<<<< HEAD
-=======
+
+
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
-import LSaleMerchantDps from '../components/L_sale_merchant_dps'
 
 
 
 
->>>>>>> a5a8407c9fad030ce054eca9887bf81ee023da8f
+
 
 
 
@@ -50,7 +51,10 @@ export default new VueRouter({
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
 
-    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader },
+    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
+
+  
+
 
     { path: '/login', component: Login }
 
