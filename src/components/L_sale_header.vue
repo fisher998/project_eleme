@@ -1,7 +1,6 @@
 <template>
     <div>
-        <div class="L_sale_header">
-            
+        <div class="L_sale_header">            
             <div class="L_sale_header_up">
                 <span></span>
                 <h3>东城区北京市政府</h3>

@@ -1,13 +1,19 @@
 <template>
     <div>
        <div class="L_sale_navlist_wrap">
+          
+                <!-- <a href="###"> -->
+                    <router-link to="/L_sale_navlist_meishi">                    
+                        <dl>
+                            <dt><img src="../img/l_img/icon11.jpg" alt=""></dt>
+                            <dd>美食</dd>
+                        </dl>
+                    </router-link>
+                        
+                <!-- </a> -->
+            <!-- <l-sale-navlisgt-meishi></l-sale-navlisgt-meishi> -->
            <a href="###">
-                <dl>
-                    <dt><img src="../img/l_img/icon11.jpg" alt=""></dt>
-                    <dd>美食</dd>
-                </dl>
-           </a>
-           <a href="###">
+               
                 <dl>
                     <dt><img src="../img/l_img/icon11.jpg" alt=""></dt>
                     <dd>美食</dd>
@@ -69,12 +75,16 @@
 </template>
     
 <script>
+import LSaleNavlisgtMeishi from './L_sale_navlist_meishi'
 export default {
     name: "L_sale_navlist",
     data () {
         return {
              
         };
+    },
+    components:{
+        LSaleNavlisgtMeishi
     }
 }
 </script>
@@ -88,11 +98,10 @@ export default {
     .L_sale_navlist_wrap a{
         width: 20%;
         height: 1.65rem;        
-        background:white;
-       
+        background:white;       
         margin-top: 0.1rem;
         float: left;
-    }
+    }    
     .L_sale_navlist_wrap dl dd{
         text-align: center;
         margin: 0;
