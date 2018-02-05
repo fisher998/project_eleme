@@ -1,11 +1,13 @@
 <template>
     <div class="find">
         <find-info></find-info>
+       
     </div>
 </template>
 
 <script>
     import findInfo from './z_find_info.vue'
+   
     export default {
         name: "find",
         data () {
@@ -14,7 +16,8 @@
             }
         },
         components: {
-            findInfo
+            findInfo,
+           
         }
     }
 </script>

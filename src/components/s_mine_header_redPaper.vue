@@ -7,8 +7,8 @@
                 <a href="">兑换红包</a>
             </div>
             <div class="s_mine_header_redPaper_zj">
-                <router-link to="/s_mine_header_redPaper/s_mine_header_redPaper_red">红包{{ msg_red }}个</router-link>
-                <router-link to="/s_mine_header_redPaper/s_mine_header_redPaper_shop">商家代金券{{ msg_shop }}张</router-link>
+                <router-link to="/s_mine_header_redPaper/red">红包{{ msg_red }}个</router-link>
+                <router-link to="/s_mine_header_redPaper/shop">商家代金券{{ msg_shop }}张</router-link>
             </div>
         </div> 
         <router-view></router-view>

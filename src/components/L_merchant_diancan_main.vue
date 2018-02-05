@@ -168,6 +168,12 @@ export default {
         return {
              
         };
+    },
+    created () {
+        this.axios.get('http://10.0.157.249:8888/l_diancan')
+            .then(res => {
+                // console.log(res);
+            })
     }
 }
 </script>

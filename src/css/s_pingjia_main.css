@@ -1,0 +1,22 @@
+.s_pingjia_main{
+    width: 100%;
+    padding-left: 0.24rem;   
+}
+.s_pingjia_main_tou{
+    width: 100%;
+    padding-top: 0.14rem; 
+    padding-bottom: 0.27rem; 
+    /* background: pink; */
+    border-bottom: 0.01rem solid #eeeeee;
+}
+.s_pingjia_main_tou ul li{
+    float: left;
+    width: 1.6rem;
+    height: 0.56rem;
+    background: #0097ff;
+    margin: 0.15rem 0.15rem 0 0;
+    line-height: 0.56rem;
+    text-align: center;
+    font-size: 0.25rem;
+    color: white;
+}

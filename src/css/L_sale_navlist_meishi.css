@@ -1,0 +1,125 @@
+.L_sale_navlist_meishi_header-wrap{
+    position: fixed;
+    top: 0;
+}
+
+.L_sale_navlist_meishi_header{
+    background:#009eff;
+    position: relative;   
+    
+}
+.L_sale_navlist_meishi_header h3{
+   width: 100%;
+   height: .93rem;
+   line-height: .93rem;
+   background-color: #009eff;
+   color: white;
+   font-size: .4rem;
+   text-align: center;
+   position: relative;
+}
+.L_sale_navlist_meishi_header h3 span:first-child{
+    position: absolute;
+    width: .24rem;
+    height: .39rem;
+    display: inline-block;
+    background: url(../img/l_img/back.png)no-repeat left center;
+    background-size: 100% 100%;
+    top: .24rem;
+    left: .52rem;
+}
+.L_meishi_header_nav1{
+    width: 7.5rem;
+    overflow-x:scroll;     
+    height: .7rem;    
+    
+}
+.L_meishi_header_nav1::-webkit-scrollbar {display: none;}
+
+.L_meishi_header_nav1_wrap{
+    width: 17rem;
+    height: .62rem;        
+    /* margin: 0 0 .07rem 0; */
+}
+
+.L_meishi_header_nav1_wrap li{
+    margin: 0 .28rem;
+    color:#afe0ff;
+    font-size: .3rem;
+    float: left;        
+    height: .58rem;
+    line-height: .52rem;       
+}
+.L_meishi_header_nav1_wrap li:first-child{
+    border-bottom: 2px solid #cccccc;
+    /* margin: 0 0 .09rem 0; */
+}
+.L_meishi_more{
+    position: absolute;
+    width: .90rem;
+    height: .55rem;
+    background-color: #009eff;    
+    border-left: 2px solid #0088ff;
+    right: 0rem;
+    top: .9rem;
+    text-align: center;
+    line-height: .55rem;
+}
+.L_meishi_more span{        
+    display: inline-block;
+    width: .25rem;
+    height: .14rem;
+    background: url(../img/l_img/icon_more.png)no-repeat left center;
+    background-size: 100% 100%;    
+}
+/* 头部第二个div */
+.L_meishi_header_nav2{
+    height: .8rem;
+    background: #fff;
+    text-align: center;
+    line-height: .8rem;
+    border-bottom: 1px solid #dddddd;
+}
+.L_meishi_header_nav2>a{
+    color: #666666;
+    font-size: .28rem;
+    display: block;
+    float: left;
+    width: 25%;
+   
+}
+.L_more_zhonghe{
+    width: .12rem;
+    display: inline-block;
+    height: .08rem;
+    background: url(../img/l_img/iconP7.png)no-repeat left center;
+    background-size:100% 100%;
+    margin: 0 0 0 .1rem;   
+   
+}
+.L_huangguan{
+    width: .28rem;
+    display: inline-block;
+    height: .2rem;
+    background: url(../img/l_img/huangguan.jpg)no-repeat left center;
+    background-size:100% 100%;
+    margin: 0 0 0 .1rem;
+}
+.L_huangguan{
+    width: .24rem;
+    display: inline-block;
+    height: .22rem;
+    background: url(../img/l_img/huangguan.jpg)no-repeat left center;
+    background-size:100% 100%;
+    margin: 0 0 0 .1rem;
+}
+.L_loudou{
+    width: .24rem;
+    display: inline-block;
+    height: .24rem;
+    background: url(../img/l_img/iconP8.png)no-repeat left center;
+    background-size:100% 100%;   
+    text-align: center;   
+}
+
+
