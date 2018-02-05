@@ -2,24 +2,6 @@
     width: 100%;
     padding-left: 0.24rem;   
 }
-.s_pingjia_comment_header{
-    width: 100%;
-    padding-top: 0.14rem; 
-    padding-bottom: 0.27rem; 
-    /* background: pink; */
-    border-bottom: 0.01rem solid #eeeeee;
-}
-.s_pingjia_comment_header ul li{
-    float: left;
-    width: 1.6rem;
-    height: 0.56rem;
-    background: #0097ff;
-    margin: 0.15rem 0.15rem 0 0;
-    line-height: 0.56rem;
-    text-align: center;
-    font-size: 0.25rem;
-    color: white;
-}
 /* s_pingjia_comment_user */
 .s_pingjia_comment_user{
     width: 100%;
@@ -38,6 +20,12 @@
 .s_pingjia_comment_user h3 span{
     font-size: 0.16rem;
     color: #bbbbbb;
+    margin-left: .1rem;
+}
+.s_pingjia_comment_user h2{
+    margin: .1rem 0;
+    font-size: 0.25rem;
+    font-weight: normal;
 }
 .s_pingjia_comment_user h4{
     font-size: 0.2rem;

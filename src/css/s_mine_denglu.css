@@ -1,0 +1,40 @@
+.s_mine_header{
+    width: 100%;
+    height: 3.08rem;
+    background-image: linear-gradient(to right, #00a8ff, #0087ff);
+    color: white;
+}
+.s_mine_header_p{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.32rem;
+    font-weight: bold;
+    background: url('../img/s_mine_img/big_jiao.png') no-repeat 0.33rem center;
+    background-size: 0.2rem 0.34rem;
+    text-align: center;
+}
+.s_mine_header_las{
+    /* width: 100%; */
+    height: 2.2rem;
+    /* border: 1px solid black; */
+    font-size: 0.24rem;
+    background: url('../img/s_mine_img/images.png') no-repeat 0.3rem 0.4rem,
+    url('../img/s_mine_img/san.png') no-repeat 7rem 0.85rem;
+    background-size: 1.2rem 1.2rem, 0.12rem, 0.2rem;
+    text-indent: 2.1rem;
+}
+.s_mine_header_las a{
+    color: white;
+}
+.s_mine_header_las h2{
+    padding-top: 0.55rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.38rem;
+    font-weight: bold;
+}
+.s_mine_header_las p{
+    background: url('../img/s_mine_img/tel.png') no-repeat 2.06rem center;
+    background-size: 0.14rem 0.22rem;
+    text-indent: 2.25rem;
+}

@@ -15,12 +15,16 @@
            </div>
        </div>
        <div class="s_pingjia_p"></div>
+       <sPingjiaMain></sPingjiaMain>
        <sPingjiaComment></sPingjiaComment>
     </div>
 </template>
     
 <script>
+import sPingjiaMain from './s_pingjia_mian.vue'
 import sPingjiaComment from './s_pingjia_comment.vue'
+
+
 export default {
     name: "s_pingjia",
     data () {
@@ -29,6 +33,7 @@ export default {
         };
     },
     components: {
+        sPingjiaMain,
         sPingjiaComment
     }
 }
