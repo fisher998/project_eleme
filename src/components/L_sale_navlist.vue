@@ -103,12 +103,12 @@ export default {
     components:{
         LSaleNavlisgtMeishi
     },
-    // created () {
-    //     this.axios.get('http://10.0.157.249:8888/header')
-    //         .then(res => {
-    //             console.log(res);
-    //         })
-    // }
+    created () {
+        this.axios.get('http://10.0.157.249:8888/header')
+            .then(res => {
+                console.log(res);
+            })
+    }
 
 }
 </script>
