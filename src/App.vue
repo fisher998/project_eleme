@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     isShow() {
-      console.log(this.$route.path);
+      // console.log(this.$route.path);
       return /(\/sale|\/find|\/order|\/mine)/.test(this.$route.path) ? true : false;
     }
   }

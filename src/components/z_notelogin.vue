@@ -22,7 +22,7 @@
         methods: {
             createYzm() {
                 this.createyzm = Math.floor(Math.random() * 1000000);
-
+                this.$store.dispatch('add', this.tel)
                 // 验证码
                 this.yzm = this.createyzm;
             }

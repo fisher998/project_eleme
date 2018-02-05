@@ -7,53 +7,28 @@ import Find from '../components/find'
 import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
-
 // 红包页面
 import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
-
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-
-
 import Login from '../components/z_login'
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
-
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
-
-
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
-
-
-
+import Notelogin from '../components/z_notelogin'
+import Psdlogin from '../components/z_psdlogin'
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
   routes: [
     // 这个path就是router-link里的to跳转的地址
     // component就是根据路由的地址，找到对应的组件
-    { path: '', redirect: '/sale' },
+    { path: '', redirect: '/sale' }, 
     { path: '/find', component: Find },
     { path: '/mine', component: Mine },
       // 配置路由  s_mine_header_redPaper
@@ -65,55 +40,12 @@ export default new VueRouter({
     ]},
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
-
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
-<<<<<<< HEAD
     ]},
-=======
-    ]}
-
-
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
-    { path: '/login', component: Login , children: [
-      { path: 'notelogin', component: Notelogin },
-      { path: 'psdlogin', component: Psdlogin },
-    ]},
-
-
-
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
-
-  
-
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 65bdb0b497981800027d95d404b905d03174af56
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
@@ -122,31 +54,5 @@ export default new VueRouter({
       // {  },
       // {  }
     ]},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d3a2c6d19fe7dfc14e9a9205b0026fbeca7120f4
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
->>>>>>> 7c71f22427096565b0fac1cdfcbaf09081271397
-
-
->>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
-
-
-
-    { path: '/login', component: Login }
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 070d4576111af21b8e7515a67e123e320b7c0be4
->>>>>>> 5ddb46acdbc600aee8623f87c937f20e268cf4db
   ]
 })

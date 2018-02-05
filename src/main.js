@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 // 导入路由模块
 import router from './router/index'
-
 import './css/reset.css'
+import axios from 'axios'
+Vue.prototype.axios = axios
+
+// 导入我们自定义的vuex仓库
+import store from './store/store'
 
 
 
@@ -18,6 +22,8 @@ new Vue({
   components: { App },
   template: '<App/>',
   router,
+  // 挂载store
+  store
 })
 
 
