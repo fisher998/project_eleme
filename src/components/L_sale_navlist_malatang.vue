@@ -3,7 +3,7 @@
        <div class="L_sale_navlist_meishi_header-wrap">
            <div class="L_sale_navlist_meishi_header">
                <h3>
-                   <span></span>
+                   <span onclick="window.history.go(-1)"></span>
                    <span>麻辣烫</span>
                 </h3>
                 <div class="L_meishi_header_nav1">
@@ -39,7 +39,7 @@
 <script>
 import LSaleNavlistMeishiMain from './L_sale_navlist_meishi_main'
 export default {
-    name: "L_sale_navlist_meishi",
+    name: "L_sale_navlist_malatang",
     data () {
         return {
              

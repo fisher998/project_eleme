@@ -3,7 +3,7 @@
        <div class="L_sale_navlist_meishi_header-wrap">
            <div class="L_sale_navlist_meishi_header">
                <h3>
-                   <span></span>
+                   <span onclick="window.history.go(-1)"></span>
                    <span>浪漫鲜花</span>
                 </h3>
                 <div class="L_meishi_header_nav1">

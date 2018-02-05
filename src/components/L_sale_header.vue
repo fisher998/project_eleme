@@ -36,7 +36,7 @@ export default {
         background-image: linear-gradient(90deg,#0af,#0085ff);
     }
     .L_sale_header_up{
-        padding: 0.2rem 0.28rem 0 0.28rem;
+        padding: 0.35rem 0.21rem 0 0.21rem;
         color: white;
         overflow: hidden;
     }
@@ -51,9 +51,12 @@ export default {
     }
     .L_sale_header_up h3{
         margin: 0;
+        height: .5rem;
         line-height: .5rem;
         /* width: 2.46rem; */
         float: left;
+        font-size: .35rem;
+        /* margin: .2rem 0 0 0; */
     }
     .L_sale_header_up span:last-child{
         width: 0.25rem;

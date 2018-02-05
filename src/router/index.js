@@ -26,8 +26,21 @@ import LMerchantShangjia from '../components/L_merchant_shangjia'
 import spingjia from '../components/s_pingjia'
 // 导入首页头部下方的navlist的组件
 import LSaleNavlist from '../components/L_sale_navlist'
-// 导入首页头部下方的navlist的组件美食二级路由
+// 导入首页头部下方的navlist的组件美食一级路由
 import LSaleNavlistMeishi from '../components/L_sale_navlist_meishi'
+import LSaleNavlistWancan from '../components/L_sale_navlist_wancan'
+import LSaleNavlistShangchaobianli from '../components/L_sale_navlist_shangchaobianli'
+import LSaleNavlistGuoshushengxian from '../components/L_sale_navlist_guoshushengxian'
+import LSaleNavlistDapaiwuzhe from '../components/L_sale_navlist_dapaiwuzhe'
+import LSaleNavlistYiyaojiankang from '../components/L_sale_navlist_yiyaojiankang'
+import LSaleNavlistLangmanxianhua from '../components/L_sale_navlist_langmanxianhua'
+import LSaleNavlistMalatang from '../components/L_sale_navlist_malatang'
+import LSaleNavlistDifangcaixi from '../components/L_sale_navlist_difangcaixi'
+import LSaleNavlistPisayimian from '../components/L_sale_navlist_pisayimian'
+
+
+
+
 
 
 
@@ -50,9 +63,7 @@ export default new VueRouter({
       { path: 's_mine_header_redPaper_shop', component: SMineHeaderRedPaperShop }
     ]},
     { path: '/order', component: Order },
-    { path: '/sale', component: Sale, children: [
-      {path:'meishi', component:LSaleNavlistMeishi}
-    ]},
+    { path: '/sale', component: Sale},
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
@@ -66,6 +77,16 @@ export default new VueRouter({
       { path: 'merchant_shangjia', component: LMerchantShangjia },     
     ]},
     // 导入首页的navlist组件
-    {path:'/L_sale_navlist_meishi',component:LSaleNavlistMeishi }
+    {path:'/L_sale_navlist_meishi',component:LSaleNavlistMeishi },
+    {path:'/L_sale_navlist_wancan',component:LSaleNavlistWancan },
+    {path:'/L_sale_navlist_shangchaobianli',component:LSaleNavlistShangchaobianli },
+    {path:'/L_sale_navlist_guoshushengxian',component:LSaleNavlistGuoshushengxian },
+    {path:'/L_sale_navlist_dapaiwuzhe',component:LSaleNavlistDapaiwuzhe },
+    {path:'/L_sale_navlist_yiyaojiankang',component:LSaleNavlistYiyaojiankang },
+    {path:'/L_sale_navlist_langmanxianhua',component:LSaleNavlistLangmanxianhua },
+    {path:'/L_sale_navlist_malatang',component:LSaleNavlistMalatang },
+    {path:'/L_sale_navlist_difangcaixi',component:LSaleNavlistDifangcaixi },
+    {path:'/L_sale_navlist_pisayimian',component:LSaleNavlistPisayimian }, 
   ]
 })
+

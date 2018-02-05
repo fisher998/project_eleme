@@ -3,7 +3,7 @@
        <div class="L_sale_navlist_meishi_header-wrap">
            <div class="L_sale_navlist_meishi_header">
                <h3>
-                   <span></span>
+                   <span onclick="window.history.go(-1)"></span>
                    <span>晚餐</span>
                 </h3>
                 <div class="L_meishi_header_nav1">
@@ -30,8 +30,7 @@
                     <a><span class="L_huangguan"></span>会员领红包</a>
                     <a>筛选<span class="L_loudou"></span></a>
                 </div>                
-           </div> 
-           
+           </div>            
        </div>
        <LSaleNavlistMeishiMain></LSaleNavlistMeishiMain>        
     </div>
