@@ -98,53 +98,37 @@ export default {
     data () {
         return {
              names: [],
-             src: []
+             src: [],            
         };
     },
     components:{
         LSaleNavlisgtMeishi
     },
     methods: {
-        nac_list() {
+        nav_list() {
                 
             for (var obj of this.names) {
-                // console.log(obj);
-            var str = obj.image_hash;
-            var first = str.substr(0, 1)
-            var second = str.substr(1, 2)
-            var last = str.substr(3, str.length-3)
-            str = first + '/' + second + '/' + last
-            if (str.endsWith('jpeg')) {
-                this.src.push('//fuss10.elemecdn.com/' + str + '.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/')
-            } else {
-                this.src.push('//fuss10.elemecdn.com/' + str + '.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/')
+                    // console.log(obj);
+                var str = obj.image_hash;
+                var first = str.substr(0, 1)
+                var second = str.substr(1, 2)
+                var last = str.substr(3, str.length-3)
+                str = first + '/' + second + '/' + last
+                if (str.endsWith('jpeg')) {
+                    this.src.push('//fuss10.elemecdn.com/' + str + '.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/')
+                } else {
+                    this.src.push('//fuss10.elemecdn.com/' + str + '.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/')
+                }
             }
         }
-
-        // 7d8a867c870b22bc74c87c348b75528djpeg
-
-
-        // fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.
-        // jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/
-
-    }
     },
     created () {
         this.axios.get('http://10.0.157.249:8888/header')
-            .then(res => {
-                // console.log(res.data[0].entries);
-                this.names = res.data[0].entries;
-                this.nac_list();
-                console.log(this.names);
-        }),
-         this.axios.get('http://10.0.157.249:8888/dianpu')
-            .then(res => {
-                console.log(res.data[0]);
-                // this.names = res.data[0].entries;
-                // this.nac_list();
-                // console.log(this.names);
-        })
-    },
+                .then(res => {
+                    this.names = res.data[0].entries;
+                    this.nav_list();
+            })
+    }
   
 
 }
