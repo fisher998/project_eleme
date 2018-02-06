@@ -12,30 +12,12 @@ import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
-
 // 登录后的账户信息页面 
 import Account from '../components/s_account'
-
-
 import Login from '../components/z_login'
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-import Login from '../components/z_login'
 // 导入首页外买里的头部组件
-
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 // 导入首页进入的商家信息里的点餐组件
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
@@ -56,21 +38,8 @@ import LSaleNavlistLangmanxianhua from '../components/L_sale_navlist_langmanxian
 import LSaleNavlistMalatang from '../components/L_sale_navlist_malatang'
 import LSaleNavlistDifangcaixi from '../components/L_sale_navlist_difangcaixi'
 import LSaleNavlistPisayimian from '../components/L_sale_navlist_pisayimian'
-
-
-
-
-
-
-
-
-
-
-
-
 import Notelogin from '../components/z_notelogin'
 import Psdlogin from '../components/z_psdlogin'
-
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -89,63 +58,19 @@ export default new VueRouter({
     ]},
     { path: '/account', component: Account },
     { path: '/order', component: Order },
-
     { path: '/sale', component: Sale },
-
-
-
-
-
-
-
-
     { path: '/sale', component: Sale},
-
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
     ]},
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '/L_sale_merchant_header', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
       { path: 'pingjia', component: spingjia },
       { path: 'merchant_shangjia', component: LMerchantShangjia },     
     ]},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // 导入首页的navlist组件
     {path:'/L_sale_navlist_meishi',component:LSaleNavlistMeishi },
     {path:'/L_sale_navlist_wancan',component:LSaleNavlistWancan },

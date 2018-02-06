@@ -5,12 +5,13 @@
                 <span></span>
                 <h3>东城区北京市政府</h3>
                 <span></span>
-            </div>
-           
-            <div class="L_sale_header_down">
-               <div><span></span></div>
-               <span> 搜索商店、商品名称</span>
-            </div>
+            </div>  
+            <div class="searchBar" id="searchBar" :class="searchBarFixed ? 'isFixed' : ''">               
+                <div class="L_sale_header_down">
+                <div><span></span></div>
+                <span> 搜索商店、商品名称</span>
+                </div>
+            </div>     
              <div class="L_XSHD">
                 <img src="../img/l_img/pic02.jpg" alt="">
             </div>
@@ -19,17 +20,40 @@
 </template>
     
 <script>
-export default {
-    name: "L_sale_header",
-    data () {
-        return {
-             
-        };
+    export default {
+        name: "L_sale_header",
+        data () {
+            return {
+                searchBarFixed: false
+            };
+        },
+        methods:{
+            handleScroll () {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                //  console.log(scrollTop);
+                // var offsetTop = document.querySelector('#searchBar').offsetTop;
+                //  console.log(offsetTop);
+
+                if (scrollTop > 40) {
+                    this.searchBarFixed = true
+                } else {
+                    this.searchBarFixed = false
+                }
+            }
+        },
+        mounted () {
+            window.addEventListener('scroll', this.handleScroll)
+        },
+        destroyed () {
+        window.removeEventListener('scroll', this.handleScroll)
+        }
     }
-}
 </script>
     
-<style lang="css" scoped>
+<style scoped>
+
+  
+
     .L_sale_header{
         /* background-color: #00a8ff; */
         overflow: hidden;
@@ -91,12 +115,21 @@ export default {
         background-size: 100% 100%;
         display: inline-block;
         width: 0.3rem;
-        height:0.3rem;       
+        height:0.3rem;   
+        margin: -.07rem;    
     }  
     .L_sale_header_down>span{
         color: #999;
         font-family: simsun;        
         display: inline-block;
+    }  
+    .isFixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(90deg,#0af,#0085ff);
     }
+    
     
 </style>

@@ -136,17 +136,21 @@
 }
 .L_xiaoliang>h4:nth-of-type(4){
     line-height: .14rem;
+    font-size: .2rem;
 }
 .L_xiaoliang>h4:nth-of-type(4) img{
     width: .23rem;
     height: .19rem;
     float: left;
+    float: left;
+    margin: .2rem 0 0 -3.46rem;
 }
 .L_xiaoliang>h4:nth-of-type(4) span{
     font-size: .16rem;
     color: #ec470b;
     float: left;
     width: 4rem;
+    font-family: 宋体;
 }
 .L_shouxuan{
     height: 1.11rem;
