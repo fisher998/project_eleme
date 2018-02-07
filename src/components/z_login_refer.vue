@@ -1,7 +1,9 @@
 <template>
     <div class="z_box_loginto">
-        <button class="z_loginto" @click="login">登录</button>
-        <p class="z_about"><a href="#">关于我们</a></p>
+        <router-link to="/userInfo">
+            <button class="z_loginto" @click="login">登录</button>
+        </router-link>
+        <p class="z_about"><a href="javascript:void(0);">关于我们</a></p>
     </div>
 </template>
 
@@ -14,7 +16,8 @@ export default {
     },
     methods: {
         login() {
-            this.$store.dispatch('login', )
+            // this.$store.dispatch('login', )
+            console.log(this.$store.state.tel)
         }
     }
 }

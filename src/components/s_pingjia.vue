@@ -15,30 +15,63 @@
            </div>
        </div>
        <div class="s_pingjia_p"></div>
-       <sPingjiaMain></sPingjiaMain>
-       <sPingjiaComment></sPingjiaComment>
+       <!-- s_oingjia_main -->
+       <div class="s_pingjia_main">
+            <div class="s_pingjia_main_tou clearFloat">
+                <ul>
+                    <li v-for="(main, index) in mains" 
+                        :key="index"
+                        @click="change(index)"
+                        :class="color ? 'blue' : ''"
+                        >
+                        <router-link :to="'/L_sale_merchant_header/s_pingjia/name=' + index">
+                        {{ main.name }}{{ (main.count) }}
+                        </router-link>
+                    </li>
+                </ul>               
+            </div>
+            <router-view></router-view>
+        </div>
     </div>
 </template>
     
 <script>
-import sPingjiaMain from './s_pingjia_mian.vue'
-import sPingjiaComment from './s_pingjia_comment.vue'
-
-
 export default {
     name: "s_pingjia",
     data () {
         return {
-             
+             mains: []
         };
     },
     components: {
-        sPingjiaMain,
-        sPingjiaComment
+        // sPingjiaComment
+    },
+    methods: {
+        change(index) {
+            console.log(index);
+        }
+    },
+    computed: {
+        color() {
+            return 
+        }
+    },
+    created () {
+         this.axios.get('http://10.0.157.249:8888/pingjia_main')
+            .then(res => {
+                //  console.log(res.data);
+                this.mains = res.data
+            
+            })
     }
 }
 </script>
     
 <style lang="css" scoped>
     @import '../css/s_pingjia.css';
+    @import '../css/s_pingjia_main.css';
+    /* .blue{
+        background: rgb(25, 188, 238);
+        color: white;
+    } */
 </style>

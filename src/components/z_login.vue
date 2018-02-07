@@ -11,30 +11,24 @@
             </router-link>
         </div>
         <router-view></router-view>
-        <login-refer></login-refer>
+        <loginrefer></loginrefer>
     </div>
 </template>
 
 <script>
 import noteLogin from './z_notelogin'
 import psdLogin from './z_psdLogin'
-import loginRefer from './z_login_refer'
+import loginrefer from './z_login_refer'
     export default {
         data() {
             return {
                 isblue: 'z_login_way_a'
             }
         },
-        created () {
-            this.axios.get('http://10.0.157.249:8888/l_diancan')
-                .then(res => {
-                    // console.log(res);
-                })
-        },
         components: {
             noteLogin,
             psdLogin,
-            loginRefer
+            loginrefer
         },
         computed: {
             isBlue1() {

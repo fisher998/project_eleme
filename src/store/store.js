@@ -11,7 +11,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     // 把想要集中管理的数据放在state里面
     state: {
-        // tel,
+        tel: null
         // yzm
     },
     // 使用mutations里来定义的同步方法来操作数据
@@ -20,7 +20,7 @@ export default new Vuex.Store({
         // 后面的参数就是组件传过来的参数
         // 添加方法
         ADD(state, tel) {
-            state.tel = num
+            state.tel = tel
             console.log(state.tel)
         }
     },
