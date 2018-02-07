@@ -7,54 +7,59 @@
                <b>——</b>
            </div>
            <!-- <router-view></router-view> -->
-           <router-link to="/L_sale_merchant_header" v-for="(productlist, index) in sale_productlist" :key="productlist.id">
-            <div class="L_sale_main_product">
-                <div class="L_sale_main_product_left">
-                    <img :src="list(productlist.restaurant.image_path)" >
-                </div>
-                <div class="L_sale_main_product_right">
-                    <h3>
-                        <span>品牌</span>
-                        <span>{{productlist.restaurant.name}}</span>   
-                        <!-- 台资味（北京宣武门店）  -->
-                    </h3>
-                    <span>票</span>
-                    <div class="L_xiaoliang">
-                        <img src="../img/l_img/xingxing.jpg" >
-                        <h4>{{productlist.restaurant.rating}}</h4>
-                        <span>月售{{productlist.restaurant.recent_order_num}}单</span>
-                        <span class="L_ZS">蜂鸟专送</span><br/>
-                        <h4>
-                            <span>￥{{productlist.restaurant.float_minimum_order_amount}}元起送</span>|
-                            <span>{{productlist.restaurant.piecewise_agent_fee.description}}</span>
-                        </h4>
-                        <h4>
-                            <span>{{(productlist.restaurant.distance / 1000).toFixed(2)}}km</span>|
-                            <span>{{productlist.restaurant.order_lead_time}}分钟</span>
-                        </h4>
-                        <br>
-                        <h4>
-                            <img src="../img/l_img/iconP1.jpg">
-                            <span>口碑人气好店</span>
-                        </h4>
-                    </div>
-                    <div class="L_shouxuan">
-                        <h4>
-                            <img src="../img/l_img/iconP2.jpg" alt="">
-                            <span>新用户下单立减17元</span>
-                            <div class="L_ShangJia_huodong">
-                                <span>5个活动</span>
-                                <img src="../img/l_img/iconP4.png" alt="">
+           <template  v-infinite-scroll="loadMore"
+                        infinite-scroll-disabled="loading"
+                        infinite-scroll-distance="10"
+            >
+                <router-link to="/L_sale_merchant_header" v-for="(productlist, index) in sale_productlist" :key="productlist.id">
+                    <div class="L_sale_main_product">
+                        <div class="L_sale_main_product_left">
+                            <img :src="list(productlist.restaurant.image_path)" >
+                        </div>
+                        <div class="L_sale_main_product_right">
+                            <h3>
+                                <span>品牌</span>
+                                <span>{{productlist.restaurant.name}}</span>   
+                                <!-- 台资味（北京宣武门店）  -->
+                            </h3>
+                            <span>票</span>
+                            <div class="L_xiaoliang">
+                                <img src="../img/l_img/xingxing.jpg" >
+                                <h4>{{productlist.restaurant.rating}}</h4>
+                                <span>月售{{productlist.restaurant.recent_order_num}}单</span>
+                                <span class="L_ZS">蜂鸟专送</span><br/>
+                                <h4>
+                                    <span>￥{{productlist.restaurant.float_minimum_order_amount}}元起送</span>|
+                                    <span>{{productlist.restaurant.piecewise_agent_fee.description}}</span>
+                                </h4>
+                                <h4>
+                                    <span>{{(productlist.restaurant.distance / 1000).toFixed(2)}}km</span>|
+                                    <span>{{productlist.restaurant.order_lead_time}}分钟</span>
+                                </h4>
+                                <br>
+                                <h4>
+                                    <img src="../img/l_img/iconP1.jpg">
+                                    <span>口碑人气好店</span>
+                                </h4>
                             </div>
-                        </h4>
-                        <h4>
-                            <img src="../img/l_img/iconP3.jpg" alt="">
-                            <span>新40减20元</span>
-                        </h4>
-                    </div>                   
-                </div>
-            </div>
-           </router-link>
+                            <div class="L_shouxuan">
+                                <h4>
+                                    <img src="../img/l_img/iconP2.jpg" alt="">
+                                    <span>新用户下单立减17元</span>
+                                    <div class="L_ShangJia_huodong">
+                                        <span>5个活动</span>
+                                        <img src="../img/l_img/iconP4.png" alt="">
+                                    </div>
+                                </h4>
+                                <h4>
+                                    <img src="../img/l_img/iconP3.jpg" alt="">
+                                    <span>新40减20元</span>
+                                </h4>
+                            </div>                   
+                        </div>
+                    </div>
+                </router-link>
+           </template>
            <!-- <router-link to="/L_sale_merchant_header">
                 <div class="L_sale_main_product">
                     <div class="L_sale_main_product_left">
@@ -203,7 +208,18 @@ export default {
     data () {
         return {
             sale_productlist: [],
+            pageNum:0
         };
+    },
+    loadMore() {
+        this.loading = true;
+        setTimeout(() => {
+            let last = this.list[this.list.length - 1];
+            for (let i = 1; i <= 10; i++) {
+            this.list.push(last + i);
+            }
+            this.loading = false;
+        }, 2500);
     },
     methods: {
         list(str) {
@@ -226,11 +242,11 @@ export default {
     },
     
     created() {
-        this.axios.get('http://10.0.157.249:8888/L_sale_mainlist')
+        this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=1&pageSize=5')
             .then(res => {
-            
-            this.sale_productlist = res.data.items;
-            console.log( this.sale_productlist);
+            console.log(res.data)
+            this.sale_productlist = res.data.result;
+            // console.log( this.sale_productlist);
             this.productlist();
             // this.names = res.data[0].entries;
             // this.nac_list();
@@ -244,3 +260,36 @@ export default {
    @import '../css/L_sale_main.css'
 
 </style>
+
+/* 
+
+
+
+ created() {
+        this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=' +this.pageNum+'&pageSize=5')
+            .then(res => {
+            // console.log(res.data)
+            this.sale_productlist = res.data.result;
+            this.pageNum++;           
+            // this.productlist();
+            // if(res.res.data.result.length == 0) {
+            //     this.loading = true;
+            // } else {
+            //     this.loading = false;
+            // }
+        })
+    }
+}        
+
+
+
+
+
+
+
+
+
+
+
+
+*/
