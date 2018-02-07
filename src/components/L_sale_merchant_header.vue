@@ -2,7 +2,7 @@
     <div>
        <div class="L_merchant_header_wrap">
            <div class="L_merchant_header_up">
-               <span></span>
+               <span onclick="window.history.go(-1)"></span>
                <span></span>               
            </div>
            <div class="L_merchant_header_name">                  

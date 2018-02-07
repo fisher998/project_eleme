@@ -4,13 +4,13 @@ import Vue from 'vue'
 import App from './App'
 // 导入路由模块
 import router from './router/index'
-
 // 导入axios
 import axios from 'axios'
 // 给Vus的原型加上axios这个属性,来使用axios
 Vue.prototype.axios = axios
-
 import './css/reset.css'
+// 导入我们自定义的vuex仓库
+import store from './store/store'
 
 
 
@@ -23,6 +23,8 @@ new Vue({
   components: { App },
   template: '<App/>',
   router,
+  // 挂载store
+  store
 })
 
 

@@ -11,14 +11,14 @@
             </router-link>
         </div>
         <router-view></router-view>
-        <!-- <loginrefer></loginrefer> -->
+        <loginrefer></loginrefer>
     </div>
 </template>
 
 <script>
 import noteLogin from './z_notelogin'
 import psdLogin from './z_psdLogin'
-// import loginrefer from './z_login_refer'
+import loginrefer from './z_login_refer'
     export default {
         data() {
             return {
@@ -28,7 +28,7 @@ import psdLogin from './z_psdLogin'
         components: {
             noteLogin,
             psdLogin,
-            // loginrefer
+            loginrefer
         },
         computed: {
             isBlue1() {
