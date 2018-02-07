@@ -16,8 +16,8 @@
             </div>
            
         </div>  
-         <l-sale-merchant-diancan></l-sale-merchant-diancan>
-        <!-- <router-view></router-view> -->
+         <!-- <l-sale-merchant-diancan></l-sale-merchant-diancan> -->
+        <router-view></router-view>
         
     </div>
 </template>
