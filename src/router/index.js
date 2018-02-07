@@ -12,56 +12,23 @@ import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
-<<<<<<< HEAD
-// 登录后的账户信息页面 
-import Account from '../components/s_account'
-import Login from '../components/z_login'
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-// import Login from '../components/z_login'
-=======
-<<<<<<< HEAD
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-import Login from '../components/z_login'
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
-// 登录后的账户信息页面 
-import Account from '../components/s_account'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-import Login from '../components/z_login'
-import LSaleMerchantHeader from '../components/L_sale_merchant_header'
-=======
 
->>>>>>> 3c26193afba827d0de29b9b9b6044302f09e0c17
 // 登录后的账户信息页面 
-import Account from '../components/s_account'
 import Login from '../components/z_login'
->>>>>>> 5115a971fc5d86ff21c49208f34755232f988673
+import Notelogin from '../components/z_notelogin'
+import Psdlogin from '../components/z_psdlogin'
+// 登录后的账户信息页面 
+import LSaleMerchantHeader from '../components/L_sale_merchant_header'
+
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
 // 导入首页外买里的头部组件
-import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 // 导入首页进入的商家信息里的点餐组件
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 // 导入首页进入的商家信息里的商家信息组件
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 // 导入首页进入的商家信息里的商家信息二级组件_评价
-<<<<<<< HEAD
 import sPingjia from '../components/s_pingjia'
-=======
-import spingjia from '../components/s_pingjia'
-// import Notelogin from '../components/z_notelogin'
-// import Psdlogin from '../components/z_psdlogin'
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
 // 导入首页头部下方的navlist的组件
 import LSaleNavlist from '../components/L_sale_navlist'
 // 导入首页头部下方的navlist的组件美食一级路由
@@ -75,21 +42,9 @@ import LSaleNavlistLangmanxianhua from '../components/L_sale_navlist_langmanxian
 import LSaleNavlistMalatang from '../components/L_sale_navlist_malatang'
 import LSaleNavlistDifangcaixi from '../components/L_sale_navlist_difangcaixi'
 import LSaleNavlistPisayimian from '../components/L_sale_navlist_pisayimian'
-<<<<<<< HEAD
 import sPingjiaComment from '../components/s_pingjia_comment'
-=======
-<<<<<<< HEAD
 import userInfo from '../components/s_account'
-=======
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
-<<<<<<< HEAD
-=======
 
->>>>>>> 6a8b9dc11b3c0277c9230ab25dfd996669d022ac
->>>>>>> 3c26193afba827d0de29b9b9b6044302f09e0c17
->>>>>>> 5115a971fc5d86ff21c49208f34755232f988673
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -106,113 +61,23 @@ export default new VueRouter({
       { path: 'red', component: SMineHeaderRedPaperRed },
       { path: 'shop', component: SMineHeaderRedPaperShop }
     ]},
-    { path: '/account', component: Account },
     { path: '/order', component: Order },
     { path: '/sale', component: Sale },
-<<<<<<< HEAD
-    { path: '/sale', component: Sale},
-=======
-<<<<<<< HEAD
-    { path: '/sale', component: Sale},
-    // { path: '/login', component: Login },
-=======
-<<<<<<< HEAD
-    { path: '/sale', component: Sale},
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-    { path: '/sale', component: Sale},
-
->>>>>>> 6a8b9dc11b3c0277c9230ab25dfd996669d022ac
->>>>>>> 3c26193afba827d0de29b9b9b6044302f09e0c17
->>>>>>> 5115a971fc5d86ff21c49208f34755232f988673
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
     ]},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     { path: '/userInfo', component: userInfo },
-    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
-=======
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
->>>>>>> 6a8b9dc11b3c0277c9230ab25dfd996669d022ac
->>>>>>> 3c26193afba827d0de29b9b9b6044302f09e0c17
->>>>>>> 5115a971fc5d86ff21c49208f34755232f988673
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
-      { path: '/L_sale_merchant_header', redirect: 'diancan' },
+      { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
       // 评价的二级路由 
-      { path: 's_pingjia', component: sPingjia  , children:[
-        { path: '', redirect: 'name=0' },
-        { path: 'name=0', component: sPingjiaComment },
-        { path: 'name=1', component: sPingjiaComment },
-        { path: 'name=2', component: sPingjiaComment },
-        { path: 'name=3', component: sPingjiaComment },
+      { path: 'pingjia', component: sPingjia , children:[
+        { path: 'name/:changeIndex', component: sPingjiaComment },
       ]},
       { path: 'merchant_shangjia', component: LMerchantShangjia },     
     ]},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 3c26193afba827d0de29b9b9b6044302f09e0c17
->>>>>>> 5115a971fc5d86ff21c49208f34755232f988673
->>>>>>> e136c64f8afdfa1d7152365f4545847154102fdd
     // 导入首页的navlist组件
     {path:'/L_sale_navlist_meishi',component:LSaleNavlistMeishi },
     {path:'/L_sale_navlist_wancan',component:LSaleNavlistWancan },

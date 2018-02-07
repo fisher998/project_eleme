@@ -21,11 +21,11 @@
                 <ul>
                     <li v-for="(main, index) in mains" 
                         :key="index"
-                        @click="change(index)"
                         :class="color ? 'blue' : ''"
                         >
-                        <router-link :to="'/L_sale_merchant_header/s_pingjia/name=' + index">
-                        {{ main.name }}{{ (main.count) }}
+                        <!-- 路由传值 -->
+                        <router-link :to="'/L_sale_merchant_header/pingjia/name/' + index">
+                        {{ main.name }}({{ (main.count) }})
                         </router-link>
                     </li>
                 </ul>               
@@ -37,31 +37,25 @@
     
 <script>
 export default {
-    name: "s_pingjia",
+    name: "pingjia",
     data () {
         return {
              mains: []
         };
     },
-    components: {
-        // sPingjiaComment
-    },
-    methods: {
-        change(index) {
-            console.log(index);
-        }
-    },
     computed: {
         color() {
             return 
-        }
+        },
     },
     created () {
+        
          this.axios.get('http://10.0.157.249:8888/pingjia_main')
             .then(res => {
-                //  console.log(res.data);
                 this.mains = res.data
-            
+                // console.log(this.mains);
+                // 初始化路由手动跳转一下默认第一个
+                this.$router.push({ path: '/L_sale_merchant_header/pingjia/name/1' })
             })
     }
 }
@@ -70,8 +64,8 @@ export default {
 <style lang="css" scoped>
     @import '../css/s_pingjia.css';
     @import '../css/s_pingjia_main.css';
-    /* .blue{
+    .blue{
         background: rgb(25, 188, 238);
         color: white;
-    } */
+    }
 </style>

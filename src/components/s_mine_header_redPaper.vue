@@ -26,8 +26,7 @@ export default {
     },
     methods: {
         back() {
-            // this.$router.go(-1)
-            history.back()
+            this.$router.push({ path: '/mine' });
         }
     }
 }
