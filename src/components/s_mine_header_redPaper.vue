@@ -17,7 +17,7 @@
     
 <script>
 export default {
-    name: "s_mine_header_reedPaper",
+    name: "s_mine_header_readPaper",
     data () {
         return {
            msg_red: 0,

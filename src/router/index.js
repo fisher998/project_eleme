@@ -12,37 +12,22 @@ import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
-<<<<<<< HEAD
 // 登录后的账户信息页面 
 import Account from '../components/s_account'
-
-
 import Login from '../components/z_login'
-
 import Notelogin from '../components/z_notelogin'
-
 import Psdlogin from '../components/z_psdlogin'
-
-
-
-
-
-
-
-
-=======
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-import Login from '../components/z_login'
+// import Login from '../components/z_login'
 // 导入首页外买里的头部组件
->>>>>>> 29a8dba5d67ec45477da355319502b10b1416def
 import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 // 导入首页进入的商家信息里的点餐组件
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 // 导入首页进入的商家信息里的商家信息组件
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 // 导入首页进入的商家信息里的商家信息二级组件_评价
-import spingjia from '../components/s_pingjia'
+import sPingjia from '../components/s_pingjia'
 // 导入首页头部下方的navlist的组件
 import LSaleNavlist from '../components/L_sale_navlist'
 // 导入首页头部下方的navlist的组件美食一级路由
@@ -56,21 +41,7 @@ import LSaleNavlistLangmanxianhua from '../components/L_sale_navlist_langmanxian
 import LSaleNavlistMalatang from '../components/L_sale_navlist_malatang'
 import LSaleNavlistDifangcaixi from '../components/L_sale_navlist_difangcaixi'
 import LSaleNavlistPisayimian from '../components/L_sale_navlist_pisayimian'
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-
-
-=======
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
->>>>>>> 29a8dba5d67ec45477da355319502b10b1416def
+import sPingjiaComment from '../components/s_pingjia_comment'
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -89,63 +60,26 @@ export default new VueRouter({
     ]},
     { path: '/account', component: Account },
     { path: '/order', component: Order },
-<<<<<<< HEAD
     { path: '/sale', component: Sale },
-
-
-
-
-
-
-
-=======
     { path: '/sale', component: Sale},
->>>>>>> 29a8dba5d67ec45477da355319502b10b1416def
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },
       { path: 'notelogin', component: Notelogin },
       { path: 'psdlogin', component: Psdlogin },
     ]},
-<<<<<<< HEAD
-
-
-
-    // { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
-
-  
-
-
-
-
-
-
-
-=======
-    { path: '/L_sale_merchant_header', component: LSaleMerchantHeader},
->>>>>>> 29a8dba5d67ec45477da355319502b10b1416def
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '/L_sale_merchant_header', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan },
-      { path: 'pingjia', component: spingjia },
+      // 评价的二级路由 
+      { path: 's_pingjia', component: sPingjia  , children:[
+        { path: '', redirect: 'name=0' },
+        { path: 'name=0', component: sPingjiaComment },
+        { path: 'name=1', component: sPingjiaComment },
+        { path: 'name=2', component: sPingjiaComment },
+        { path: 'name=3', component: sPingjiaComment },
+      ]},
       { path: 'merchant_shangjia', component: LMerchantShangjia },     
     ]},
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-    { path: '/login', component: Login }
-
-
-
-
-
-=======
     // 导入首页的navlist组件
     {path:'/L_sale_navlist_meishi',component:LSaleNavlistMeishi },
     {path:'/L_sale_navlist_wancan',component:LSaleNavlistWancan },
@@ -157,7 +91,6 @@ export default new VueRouter({
     {path:'/L_sale_navlist_malatang',component:LSaleNavlistMalatang },
     {path:'/L_sale_navlist_difangcaixi',component:LSaleNavlistDifangcaixi },
     {path:'/L_sale_navlist_pisayimian',component:LSaleNavlistPisayimian }, 
->>>>>>> 29a8dba5d67ec45477da355319502b10b1416def
   ]
 })
 

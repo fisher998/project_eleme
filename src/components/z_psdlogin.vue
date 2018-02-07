@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="psdlogin">
 
     </div>
 </template>

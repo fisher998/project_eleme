@@ -5,7 +5,7 @@
                <router-link to="/L_sale_merchant_header/diancan">
                     <li>点餐</li>
                </router-link>
-               <router-link to="/L_sale_merchant_header/pingjia">
+               <router-link to="/L_sale_merchant_header/s_pingjia">
                     <li>评价</li>
                </router-link>
                <router-link to="/L_sale_merchant_header/merchant_shangjia">

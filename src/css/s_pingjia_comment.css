@@ -24,7 +24,7 @@
 }
 .s_pingjia_comment_user h2{
     margin: .1rem 0;
-    font-size: 0.25rem;
+    font-size: 0.28rem;
     font-weight: normal;
 }
 .s_pingjia_comment_user h4{
@@ -57,18 +57,18 @@
 }
 .s_pingjia_comment_user h5 span{
     display: inline-block;
-    width: 1.46rem;
+    width: 1.1rem;
     height: 0.47rem;
     /* line-height: 0.47resm; */
     text-align: center;
     color: #6d7885;
     border: 0.02rem solid #eeeeee;
     font-weight: normal;
-    margin: 0 0.1rem 0.16rem 0;
+    margin: .15rem 0.15rem 0.16rem 0;
 }
 .s_pingjia_comment_user h5 span i{
     display: inline-block;
-    width: 1.2rem;
+    width: 1rem;
     margin-top: 0.03rem;
     overflow: hidden;
     white-space: nowrap;
