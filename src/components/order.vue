@@ -12,7 +12,7 @@
             </div>
             <p class="order_p"></p>
             <div class="order_2">
-                <p>{{ cartProduct.name }}<span>{{ cartProduct.price }} 元</span></p>
+                <p>{{ cartProduct.name }} {{ cartProduct.count }}份<span>{{ cartProduct.price }} 元</span></p>
             </div>
         </div>
     </div>
