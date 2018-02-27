@@ -31,7 +31,7 @@
         font-size: 0.26rem;
         text-align: center;
     }
-    .z_more_info>span{
+    /* .z_more_info>span{
 
-    }
+    } */
 </style>

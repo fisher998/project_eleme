@@ -25,6 +25,7 @@
                 // 验证码
                 this.yzm = this.createyzm;
                 this.$store.dispatch('add', this.tel)
+                console.log(this.$store.getters.getTel)
             }
         },
         computed: {

@@ -1,6 +1,6 @@
 <template>
     <div class="z_box_loginto">
-        <router-link to="/userInfo">
+        <router-link :to="userInfo">
             <button class="z_loginto" @click="login">登录</button>
         </router-link>
         <p class="z_about"><a href="javascript:void(0);">关于我们</a></p>
@@ -11,13 +11,42 @@
 export default {
     data() {
         return {
-            
+            userInfo: '/login/notelogin',
+            userName:null,
+            userTel: null
         }
     },
     methods: {
         login() {
-            // this.$store.dispatch('login', )
-            console.log(this.$store.state.tel)
+            var userTel = this.$store.getters.getTel;
+            console.log(userTel);
+            // this.axios.post('http://10.0.157.249:8888/login', userObj);
+            // this.axios.get('http://10.0.157.221:8888/login', {
+            //     params: {
+            //         userName: 1111
+            //     }
+            // }).then( res => {
+
+            // })
+            this.axios({
+                method: 'get',
+                url: 'http://10.0.157.249:8888/login',
+                params: {
+                    tel: userTel,
+                    // lastName: 'Flintstone'
+                }
+            })
+                .then(res => {
+                    // console.log(res)
+                    if (res.data.vector == false) {
+                        alert(res.data.userName);
+                    } else {
+                        window.localStorage.setItem('userInfo', JSON.stringify(res.data))
+                        this.userInfo = '/userInfo';
+                        // this.$router.push({ path: '/userInfo' });
+                        this.$router.push({path: '/mine'})
+                    }
+                })
         }
     }
 }

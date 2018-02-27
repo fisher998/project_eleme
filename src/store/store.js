@@ -12,7 +12,6 @@ export default new Vuex.Store({
     // 把想要集中管理的数据放在state里面
     state: {
         tel: null
-        // yzm
     },
     // 使用mutations里来定义的同步方法来操作数据
     mutations: {
@@ -21,7 +20,7 @@ export default new Vuex.Store({
         // 添加方法
         ADD(state, tel) {
             state.tel = tel
-            console.log(state.tel)
+            // console.log(state.tel)
         }
     },
     // 使用actions里来定义异步方法, 一般在组件中会通过
@@ -31,6 +30,11 @@ export default new Vuex.Store({
         add(state, tel) {
             //  调用mutations里的LOGIN方法
             state.commit('ADD', tel)
+        }
+    },
+    getters: {
+        getTel(state) {
+            return state.tel;
         }
     }
 
