@@ -11,10 +11,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     // 把想要集中管理的数据放在state里面
     state: {
+<<<<<<< HEAD
+        tel: null
+=======
         tel: null,
         totalPrice: 0,
         cartProductList: []
         // yzm
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
     },
     // 使用mutations里来定义的同步方法来操作数据
     mutations: {
@@ -23,8 +27,13 @@ export default new Vuex.Store({
         // 添加方法
         ADD(state, tel) {
             state.tel = tel
+<<<<<<< HEAD
+            // console.log(state.tel)
+        }
+=======
             console.log(state.tel)
         },
+<<<<<<< HEAD
          // 添加商品
          ADDS(state, product) {
             // state.totalPrice += price
@@ -58,6 +67,12 @@ export default new Vuex.Store({
         REDUCES(state, price) {
             state.totalPrice -= price
         }
+=======
+        // CHANGE(state, index) {
+        //     state.index = index
+        // }
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
+>>>>>>> b5b751b880501bf767434d040a78846d6d7bbb06
     },
     // 使用actions里来定义异步方法, 一般在组件中会通过
     // dispatch来调用这里的方法, 然后这里在调用commit来处理
@@ -66,6 +81,15 @@ export default new Vuex.Store({
         add(state, tel) {
             //  调用mutations里的LOGIN方法
             state.commit('ADD', tel)
+<<<<<<< HEAD
+        }
+    },
+    getters: {
+        getTel(state) {
+            return state.tel;
+        }
+    }
+=======
         },
         // 购物车
         adds(state, product) {
@@ -76,6 +100,7 @@ export default new Vuex.Store({
             state.commit('REDUCES', price)
         }
     },
+<<<<<<< HEAD
        // getters一般是返回state中数据用的
        getters: {
         // 获取商品总数
@@ -104,6 +129,15 @@ export default new Vuex.Store({
         }
     }
 
+=======
+     // getters一般是返回state中数据用的
+    //  getters: {
+    //     changeIndex(state) {
+    //         return state.index 
+    //     }
+    // }
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
+>>>>>>> b5b751b880501bf767434d040a78846d6d7bbb06
 
 
 })
