@@ -30,11 +30,13 @@
             </div>
        </div>
        <LSaleMerchantDps></LSaleMerchantDps>
+       <sShop></sShop>
     </div>
 </template>
     
 <script>
 import LSaleMerchantDps from '../components/L_sale_merchant_dps'
+import sShop from '../components/s_shop'
 export default {
     name: "L_sale_merchant_header",
     data () {
@@ -48,7 +50,8 @@ export default {
     },
    },
     components:{
-        LSaleMerchantDps
+        LSaleMerchantDps,
+        sShop
     }
 }
 </script>

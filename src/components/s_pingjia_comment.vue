@@ -88,7 +88,7 @@ export default {
         })
     },
     created () {
-         console.log(1111)
+        //  console.log(1111)
         this.axios.get('http://10.0.157.249:8888/pingjia_all?pageNum=1&pageSize=10')
             .then(res => {
                 this.productList = res.data.result;

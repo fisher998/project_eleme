@@ -1,10 +1,10 @@
 <template>
     <div class="order">
         <div class="order_header">
-            <img src="../img/s_mine_img/big_jiao.png" alt="" @click="this.$router.go(-1)">
+            <img src="../img/s_mine_img/big_jiao.png" alt="" @click="back">
             我的优惠
         </div>
-        <div class="order_dingdan">
+        <div class="order_dingdan" v-for="cartProduct in cartProductList" :key="cartProduct.id">
             <div class="order_1">
                 <img src="../img/s_mine_img/yang.png" alt="">
                 <h3>金牌砂锅米线<span>商家正在备货</span></h3>
@@ -12,9 +12,8 @@
             </div>
             <p class="order_p"></p>
             <div class="order_2">
-                <p>举人米线<span>20.80元</span></p>
+                <p>{{ cartProduct.name }}<span>{{ cartProduct.price }} 元</span></p>
             </div>
-            
         </div>
     </div>
 </template>
@@ -25,6 +24,17 @@
         data () {
             return {
                 msg: "订单"
+            }
+        },
+         methods: {
+            back() {
+                // this.$router.push({ path: '/mine' });
+                this.$router.go(-1)
+            }
+        },
+        computed: {
+            cartProductList() {
+               return this.$store.state.cartProductList
             }
         }
     }
@@ -107,11 +117,11 @@
 }
 .order_2 p{
     font-size: .3rem;
+    color: black;   
 }
 .order_2 span{
     font-size: .3rem;
     float: right;
-    font-weight: bold;
     margin-right: .27rem;
     color: #333333;
 }

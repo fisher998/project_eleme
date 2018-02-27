@@ -2,19 +2,20 @@
 .L_diancan_main_wrap{
     float: right;
     width: 5.6rem;
+    margin-bottom: .2rem;
+    padding-bottom: 1.2rem;
 }
 .L_diancanmain_header{       
     border-bottom:1px solid #f2f2f2;
     height: .6rem;
     color: #999999;
-    font-size: .2rem;        
+    font-size: .2rem;     
 }
 .L_diancanmain_header h3{
     color:#666666;
     font-size:.26rem;
-    /* margin: .18rem .09rem .17rem 0; */
     line-height: .6rem;
-    width: .59rem;
+    /* width: 1.1rem; */
     display: inline-block;
 }
 .L_diancanmain_header span{
@@ -25,7 +26,8 @@
 /* 餐品列表 */
 .L_diancan_list{
   margin: .23rem 0 0 0; 
-  clear: both;     
+  clear: both;  
+  height: 2rem;   
 }
 .L_diancan_list_img{
     width: 1.54rem;
@@ -55,13 +57,13 @@
     font-style: normal;
     font-family: 宋体;
     color: #666;
-    margin:0 .15rem 0 0;
+    margin: .08rem .15rem 0 0;
     
 }
 .L_diancan_list>span{
     height: .49rem;
     line-height: .49rem;
-    color: #666666;
+    color: #2c2a2a;
     font-size: .2rem;
 }
 .L_diancan_list>span:first-child{
@@ -93,10 +95,10 @@
     float: right;
     height: .52rem;
     line-height: .52rem;
-    /* background: red; */
     width: 3.85rem;
 }
 .L_price h3{
+    width: 1.5rem;
     font-size: .3rem;
     float: left;
     color: #ff6600;
@@ -104,11 +106,26 @@
 .L_price h3 i{
     font-style:normal;
     font-size: .16rem;
-
+}
+.L_price_span{
+    float: right;
+    margin-left: .05rem;
+    font-size: .12rem;
+    color: #666666;
+    text-decoration: line-through;
 }
 .L_price img{
     width: .4rem;
     height: .4rem;
-    float: right;
-    margin:.07rem .27rem;
+    float: left;
 }
+.L_price_img1{
+    margin:.07rem .2rem .07rem .6rem;    
+}
+.L_price_imgSpan{
+    float: left;
+}
+.L_price_img2{
+    margin:.07rem .2rem .07rem .2rem;
+}
+

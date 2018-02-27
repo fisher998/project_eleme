@@ -7,9 +7,13 @@
                <b>——</b>
            </div>
            <!-- <router-view></router-view> -->
+           <!-- 要使用无限滚动，只需添加v-infinite-scroll到HTML元素。滚动该元素，
+           直到其可滚动容器的底部和底部之间的距离在infinite-scroll-distance阈值内，
+           指定的方法v-infinite-scroll将运行。 -->
            <template  v-infinite-scroll="loadMore"
                         infinite-scroll-disabled="loading"
-                        infinite-scroll-distance="10"
+                        infinite-scroll-distance="0"
+                        infinite-scroll-immediate-check='false'
             >
                 <router-link to="/L_sale_merchant_header" v-for="(productlist, index) in sale_productlist" :key="productlist.id">
                     <div class="L_sale_main_product">
@@ -60,172 +64,23 @@
                     </div>
                 </router-link>
            </template>
-           <!-- <router-link to="/L_sale_merchant_header">
-                <div class="L_sale_main_product">
-                    <div class="L_sale_main_product_left">
-                        <img src="../img/l_img/pic01.jpg">
-                    </div>
-                    <div class="L_sale_main_product_right">
-                        <h3>
-                            <span>品牌</span>
-                            <span>台资味（北京宣武门店）</span>
-                        </h3>
-                        <span>票</span>
-                        <div class="L_xiaoliang">
-                            <img src="../img/l_img/xingxing.jpg" >
-                            <h4>4.6</h4>
-                            <span>月售4678单</span>
-                            <span class="L_ZS">蜂鸟专送</span><br/>
-                            <h4>
-                                <span>￥25元起送</span>|
-                                <span>配送费￥5.18元</span>
-                            </h4>
-                            <h4>
-                                <span>1.62km</span>|
-                                <span>27分钟</span>
-                            </h4>
-                            <br>
-                            <h4>
-                                <img src="../img/l_img/iconP1.jpg">
-                                <span>口碑人气好店</span>
-                            </h4>
-                        </div>
-                        <div class="L_shouxuan">
-                            <h4>
-                                <img src="../img/l_img/iconP2.jpg" alt="">
-                                <span>新用户下单立减17元</span>
-                                <div class="L_ShangJia_huodong">
-                                    <span>5个活动</span>
-                                    <img src="../img/l_img/iconP4.png" alt="">
-                                </div>
-                            </h4>
-                            <h4>
-                                <img src="../img/l_img/iconP3.jpg" alt="">
-                                <span>新40减20元</span>
-                            </h4>
-                        </div>                   
-                    </div>
-                </div>
-           </router-link>
-           <div class="L_sale_main_product">
-               <div class="L_sale_main_product_left">
-                   <img src="../img/l_img/pic01.jpg">
-               </div>
-               <div class="L_sale_main_product_right">
-                   <h3>
-                       <span>品牌</span>
-                       <span>台资味（北京宣武门店）</span>
-                   </h3>
-                   <span>票</span>
-                   <div class="L_xiaoliang">
-                       <img src="../img/l_img/xingxing.jpg" >
-                       <h4>4.6</h4>
-                       <span>月售4678单</span>
-                       <span class="L_ZS">蜂鸟专送</span><br/>
-                       <h4>
-                           <span>￥25元起送</span>|
-                           <span>配送费￥5.18元</span>
-                       </h4>
-                       <h4>
-                           <span>1.62km</span>|
-                           <span>27分钟</span>
-                       </h4>
-                       <br>
-                       <h4>
-                           <img src="../img/l_img/iconP1.jpg">
-                           <span>口碑人气好店</span>
-                       </h4>
-                   </div>
-                   <div class="L_shouxuan">
-                       <h4>
-                           <img src="../img/l_img/iconP2.jpg" alt="">
-                           <span>新用户下单立减17元</span>
-                           <div class="L_ShangJia_huodong">
-                               <span>5个活动</span>
-                               <img src="../img/l_img/iconP4.png" alt="">
-                           </div>
-                       </h4>
-                       <h4>
-                           <img src="../img/l_img/iconP3.jpg" alt="">
-                           <span>新40减20元</span>
-                       </h4>
-                   </div>                   
-               </div>
-           </div>
-           <div class="L_sale_main_product">
-               <div class="L_sale_main_product_left">
-                   <img src="../img/l_img/pic01.jpg">
-               </div>
-               <div class="L_sale_main_product_right">
-                   <h3>
-                       <span>品牌</span>
-                       <span>台资味（北京宣武门店）</span>
-                   </h3>
-                   <span>票</span>
-                   <div class="L_xiaoliang">
-                       <img src="../img/l_img/xingxing.jpg" >
-                       <h4>4.6</h4>
-                       <span>月售4678单</span>
-                       <span class="L_ZS">蜂鸟专送</span><br/>
-                       <h4>
-                           <span>￥25元起送</span>|
-                           <span>配送费￥5.18元</span>
-                       </h4>
-                       <h4>
-                           <span>1.62km</span>|
-                           <span>27分钟</span>
-                       </h4>
-                       <br>
-                       <h4>
-                           <img src="../img/l_img/iconP1.jpg">
-                           <span>口碑人气好店</span>
-                       </h4>
-                   </div>
-                   <div class="L_shouxuan">
-                       <h4>
-                           <img src="../img/l_img/iconP2.jpg" alt="">
-                           <span>新用户下单立减17元</span>
-                           <div class="L_ShangJia_huodong">
-                               <span>5个活动</span>
-                               <img src="../img/l_img/iconP4.png" alt="">
-                           </div>
-                       </h4>
-                       <h4>
-                           <img src="../img/l_img/iconP3.jpg" alt="">
-                           <span>新40减20元</span>
-                       </h4>
-                   </div>                   
-               </div>
-           </div> -->
-           
        </div>
     </div>
 </template>
     
 <script>
+
 export default {
     name: "L_sale_main",
     data () {
         return {
             sale_productlist: [],
-            pageNum:0
+            loading: false,
+            pageNum: 1
         };
-    },
-    loadMore() {
-        this.loading = true;
-        setTimeout(() => {
-            let last = this.list[this.list.length - 1];
-            for (let i = 1; i <= 10; i++) {
-            this.list.push(last + i);
-            }
-            this.loading = false;
-        }, 2500);
     },
     methods: {
         list(str) {
-            // for (var obj of this.sale_productlist) {
-                    // console.log(obj);
-                // var str = obj.restaurant.image_hash;
                 var first = str.substr(0, 1)
                 var second = str.substr(1, 2)
                 var last = str.substr(3, str.length-3)
@@ -235,51 +90,46 @@ export default {
                 } else {
                     return '//fuss10.elemecdn.com/' + str + '.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/'
                 }
-            // }
-            // //fuss10.elemecdn.com/8/c9/f86e8a367e686a158f047fe62ebbcpng.png?
-            // imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/
-        }
+        },
+          loadMore() {
+            // this.loading = true;
+            // console.log(123)
+            // this.pageNum ++;
+            // ***
+            // setTimeout(() => {
+            //       this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=' + this.pageNum + '&pageSize=5')
+            //         .then(res => {
+            //         this.sale_productlist = res.data.result;
+            //         console.log(this.sale_productlist);
+            //         this.loading = false;
+            //     })
+            //     this.loading = false;
+            // }, 2500);
+            // ***
+            //    this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=' + this.pageNum + '&pageSize=5')
+            //         .then(res => {
+            //         this.sale_productlist = res.data.result;
+            //         console.log(this.sale_productlist);
+            //         this.loading = false;
+            //     })
+            
+        },
     },
-    
     created() {
         this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=1&pageSize=5')
             .then(res => {
-            console.log(res.data)
             this.sale_productlist = res.data.result;
-            // console.log( this.sale_productlist);
-            this.productlist();
-            // this.names = res.data[0].entries;
-            // this.nac_list();
-            // console.log(this.names);
         })
     }
 }               
 </script>
     
+  
 <style lang="css" scoped>
-   @import '../css/L_sale_main.css'
+   @import '../css/L_sale_main.css';
 
 </style>
 
-/* 
-
-
-
- created() {
-        this.axios.get('http://10.0.157.249:8888/L_sale_mainlist?pageNum=' +this.pageNum+'&pageSize=5')
-            .then(res => {
-            // console.log(res.data)
-            this.sale_productlist = res.data.result;
-            this.pageNum++;           
-            // this.productlist();
-            // if(res.res.data.result.length == 0) {
-            //     this.loading = true;
-            // } else {
-            //     this.loading = false;
-            // }
-        })
-    }
-}        
 
 
 

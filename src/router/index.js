@@ -2,6 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 全局安装路由模块
 Vue.use(VueRouter)
+
+//无限滚动指令
+import InfiniteScroll from 'mint-ui';
+Vue.use(InfiniteScroll);
 // 导入组件
 import Find from '../components/find'
 import Mine from '../components/mine'
@@ -12,23 +16,6 @@ import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
 import SMineHeaderRedPaperRed from '../components/s_mine_header_redPaper_red'
 import SMineHeaderRedPaperShop from '../components/s_mine_header_redPaper_shop'
-<<<<<<< HEAD
-// 登录后的账户信息页面 
-import Account from '../components/s_account'
-import Login from '../components/z_login'
-import Notelogin from '../components/z_notelogin'
-import Psdlogin from '../components/z_psdlogin'
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-// import Login from '../components/z_login'
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-// 登录后的账户信息页面 
-// 导入二级路由 sale首页的评论页面
-// import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
-import LSaleMerchantHeader from '../components/L_sale_merchant_header'
-// 登录后的账户信息页面 
-=======
 
 // 登录后的账户信息页面 
 import Login from '../components/z_login'
@@ -40,19 +27,12 @@ import LSaleMerchantHeader from '../components/L_sale_merchant_header'
 // 导入二级路由 sale首页的评论页面
 // import SSaleMerchantDpsP from '../components/s_sale_merchant_dps_p'
 // 导入首页外买里的头部组件
->>>>>>> new_branch
 // 导入首页进入的商家信息里的点餐组件
 import LSaleMerchantDiancan from '../components/L_sale_merchant_diancan'
 // 导入首页进入的商家信息里的商家信息组件
 import LMerchantShangjia from '../components/L_merchant_shangjia'
 // 导入首页进入的商家信息里的商家信息二级组件_评价
-<<<<<<< HEAD
-import spingjia from '../components/s_pingjia'
-// import Notelogin from '../components/z_notelogin'
-// import Psdlogin from '../components/z_psdlogin'
-=======
 import sPingjia from '../components/s_pingjia'
->>>>>>> new_branch
 // 导入首页头部下方的navlist的组件
 import LSaleNavlist from '../components/L_sale_navlist'
 // 导入首页头部下方的navlist的组件美食一级路由
@@ -66,18 +46,11 @@ import LSaleNavlistLangmanxianhua from '../components/L_sale_navlist_langmanxian
 import LSaleNavlistMalatang from '../components/L_sale_navlist_malatang'
 import LSaleNavlistDifangcaixi from '../components/L_sale_navlist_difangcaixi'
 import LSaleNavlistPisayimian from '../components/L_sale_navlist_pisayimian'
+
+import LMerchantDiancanMain from '../components/L_merchant_diancan_main'
 import sPingjiaComment from '../components/s_pingjia_comment'
 import userInfo from '../components/s_account'
 
-<<<<<<< HEAD
-// 导入下拉加载上拉刷新模块
-import { InfiniteScroll } from 'mint-ui';
-Vue.use(InfiniteScroll);
-
-
-
-=======
->>>>>>> new_branch
 export default new VueRouter({
   // 配置H5的history模式, 去掉 #/
   mode: 'history',
@@ -104,19 +77,12 @@ export default new VueRouter({
     { path: '/userInfo', component: userInfo },
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
-      { path: 'diancan', component: LSaleMerchantDiancan },
+      { path: 'diancan', component: LSaleMerchantDiancan, children: [
+        { path: 'name/:diancan', component: LMerchantDiancanMain },
+      ]},
       // 评价的二级路由 
-<<<<<<< HEAD
-      { path: 'pingjia', component: spingjia  , children:[
-        { path: '', redirect: 'name=0' },
-        { path: 'name=0', component: sPingjiaComment },
-        { path: 'name=1', component: sPingjiaComment },
-        { path: 'name=2', component: sPingjiaComment },
-        { path: 'name=3', component: sPingjiaComment },
-=======
       { path: 'pingjia', component: sPingjia , children:[
         { path: 'name/:changeIndex', component: sPingjiaComment },
->>>>>>> new_branch
       ]},
       { path: 'merchant_shangjia', component: LMerchantShangjia },     
     ]},

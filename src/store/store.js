@@ -12,7 +12,8 @@ export default new Vuex.Store({
     // 把想要集中管理的数据放在state里面
     state: {
         tel: null,
-        // index: 0
+        totalPrice: 0,
+        cartProductList: []
         // yzm
     },
     // 使用mutations里来定义的同步方法来操作数据
@@ -24,9 +25,39 @@ export default new Vuex.Store({
             state.tel = tel
             console.log(state.tel)
         },
-        // CHANGE(state, index) {
-        //     state.index = index
-        // }
+         // 添加商品
+         ADDS(state, product) {
+            // state.totalPrice += price
+
+             // 是否重复添加标识
+             var is_exist = false
+
+             // 判断是否添加过该商品
+             for (var tempCartProduct of state.cartProductList) {
+                 if (tempCartProduct.name == product.name) {
+                     tempCartProduct.count++
+                     is_exist = true
+                     break
+                 }
+             }
+ 
+             if (!is_exist) {
+                 // 构建购物车商品对象
+                 var cartProduct = {
+                     price: product.price,
+                     name: product.name,
+                     count: 1
+                 }
+                 state.cartProductList.push(cartProduct)
+             }
+        },
+        // ADDS(state, price) {
+        //     state.totalPrice += price
+        // },
+        // 减少方法
+        REDUCES(state, price) {
+            state.totalPrice -= price
+        }
     },
     // 使用actions里来定义异步方法, 一般在组件中会通过
     // dispatch来调用这里的方法, 然后这里在调用commit来处理
@@ -36,17 +67,43 @@ export default new Vuex.Store({
             //  调用mutations里的LOGIN方法
             state.commit('ADD', tel)
         },
-        // change(state, index) {
-        //     //  调用mutations里的CHANGE方法
-        //     state.commit('CHANGE', index)
-        // },
+        // 购物车
+        adds(state, product) {
+            // 调用mutations里的ADD方法
+            state.commit('ADDS', product)
+        },
+        reduces(state, price) {
+            state.commit('REDUCES', price)
+        }
     },
-     // getters一般是返回state中数据用的
-    //  getters: {
-    //     changeIndex(state) {
-    //         return state.index 
-    //     }
-    // }
+       // getters一般是返回state中数据用的
+       getters: {
+        // 获取商品总数
+        totalCount(state) {
+            var resultTotalCount = 0
+            for (var tempCartProduct of state.cartProductList) {
+                resultTotalCount += tempCartProduct.count
+            }
+            return resultTotalCount
+        },
+        count(state) {
+            for (var tempCartProduct of state.cartProductList) {
+                return tempCartProduct.count
+            }
+        },
+        totalPrice(state) {
+            return state.totalPrice
+        },
+        // 总价格
+        totalPrice(state) {
+            var resultTotalPrice = 0
+            for (var tempCartProduct of state.cartProductList) {
+                resultTotalPrice += (tempCartProduct.count * tempCartProduct.price)
+            }
+            return resultTotalPrice
+        }
+    }
+
 
 
 })

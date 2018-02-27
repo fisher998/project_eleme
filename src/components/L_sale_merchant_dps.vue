@@ -36,7 +36,7 @@ export default {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
                 // console.log(document.body.scrollTop);
             // var offsetTop = document.querySelector('#searchBar').offsetTop;
-             console.log(document.body.scrollTop, document.documentElement.scrollTop, window.pageYOffset);
+            //  console.log(document.body.scrollTop, document.documentElement.scrollTop, window.pageYOffset);
 
             if (scrollTop > 130) {
                 this.searchBarFixed = true
