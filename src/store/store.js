@@ -11,7 +11,13 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     // 把想要集中管理的数据放在state里面
     state: {
+<<<<<<< HEAD
         tel: null
+=======
+        tel: null,
+        // index: 0
+        // yzm
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
     },
     // 使用mutations里来定义的同步方法来操作数据
     mutations: {
@@ -20,8 +26,16 @@ export default new Vuex.Store({
         // 添加方法
         ADD(state, tel) {
             state.tel = tel
+<<<<<<< HEAD
             // console.log(state.tel)
         }
+=======
+            console.log(state.tel)
+        },
+        // CHANGE(state, index) {
+        //     state.index = index
+        // }
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
     },
     // 使用actions里来定义异步方法, 一般在组件中会通过
     // dispatch来调用这里的方法, 然后这里在调用commit来处理
@@ -30,6 +44,7 @@ export default new Vuex.Store({
         add(state, tel) {
             //  调用mutations里的LOGIN方法
             state.commit('ADD', tel)
+<<<<<<< HEAD
         }
     },
     getters: {
@@ -37,6 +52,20 @@ export default new Vuex.Store({
             return state.tel;
         }
     }
+=======
+        },
+        // change(state, index) {
+        //     //  调用mutations里的CHANGE方法
+        //     state.commit('CHANGE', index)
+        // },
+    },
+     // getters一般是返回state中数据用的
+    //  getters: {
+    //     changeIndex(state) {
+    //         return state.index 
+    //     }
+    // }
+>>>>>>> 77de4b66ef6cf70ea90015b61693e41892dd6805
 
 
 })

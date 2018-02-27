@@ -15,30 +15,57 @@
            </div>
        </div>
        <div class="s_pingjia_p"></div>
-       <sPingjiaMain></sPingjiaMain>
-       <sPingjiaComment></sPingjiaComment>
+       <!-- s_oingjia_main -->
+       <div class="s_pingjia_main">
+            <div class="s_pingjia_main_tou clearFloat">
+                <ul>
+                    <li v-for="(main, index) in mains" 
+                        :key="index"
+                        :class="color ? 'blue' : ''"
+                        >
+                        <!-- 路由传值 -->
+                        <router-link :to="'/L_sale_merchant_header/pingjia/name/' + index">
+                        {{ main.name }}({{ (main.count) }})
+                        </router-link>
+                    </li>
+                </ul>               
+            </div>
+            <router-view></router-view>
+        </div>
     </div>
 </template>
     
 <script>
-import sPingjiaMain from './s_pingjia_mian.vue'
-import sPingjiaComment from './s_pingjia_comment.vue'
-
-
 export default {
-    name: "s_pingjia",
+    name: "pingjia",
     data () {
         return {
-             
+             mains: []
         };
     },
-    components: {
-        sPingjiaMain,
-        sPingjiaComment
+    computed: {
+        color() {
+            return 
+        },
+    },
+    created () {
+        
+         this.axios.get('http://10.0.157.249:8888/pingjia_main')
+            .then(res => {
+                this.mains = res.data
+                // console.log(this.mains);
+                // 初始化路由手动跳转一下默认第一个
+                this.$router.push({ path: '/L_sale_merchant_header/pingjia/name/1' })
+            })
     }
 }
 </script>
     
 <style lang="css" scoped>
     @import '../css/s_pingjia.css';
+    @import '../css/s_pingjia_main.css';
+    .blue{
+        background: rgb(25, 188, 238);
+        color: white;
+    }
 </style>

@@ -17,7 +17,7 @@
 
 <script>
 import noteLogin from './z_notelogin'
-import psdLogin from './z_psdLogin'
+import psdLogin from './z_psdlogin'
 import loginrefer from './z_login_refer'
     export default {
         data() {

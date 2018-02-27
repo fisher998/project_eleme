@@ -2,7 +2,7 @@
     <div>
        <div class="L_merchant_header_wrap">
            <div class="L_merchant_header_up">
-               <span onclick="window.history.go(-1)"></span>
+               <span @click="back"></span>
                <span></span>               
            </div>
            <div class="L_merchant_header_name">                  
@@ -42,6 +42,11 @@ export default {
              
         };
     },
+   methods:{
+        back(){
+        this.$router.push({ path: '/sale' })
+    },
+   },
     components:{
         LSaleMerchantDps
     }

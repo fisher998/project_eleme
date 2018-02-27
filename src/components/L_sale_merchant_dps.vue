@@ -16,8 +16,8 @@
             </div>
            
         </div>  
-         <l-sale-merchant-diancan></l-sale-merchant-diancan>
-        <!-- <router-view></router-view> -->
+         <!-- <l-sale-merchant-diancan></l-sale-merchant-diancan> -->
+        <router-view></router-view>
         
     </div>
 </template>
@@ -34,9 +34,9 @@ export default {
     methods:{
         handleScroll () {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                console.log(scrollTop);
+                // console.log(document.body.scrollTop);
             // var offsetTop = document.querySelector('#searchBar').offsetTop;
-            //  console.log(offsetTop);
+             console.log(document.body.scrollTop, document.documentElement.scrollTop, window.pageYOffset);
 
             if (scrollTop > 130) {
                 this.searchBarFixed = true
@@ -49,6 +49,7 @@ export default {
         LSaleMerchantDiancan
     },
     mounted () {
+        document.documentElement.scrollTop = '0px'
         window.addEventListener('scroll', this.handleScroll)
     },
     destroyed () {
@@ -56,6 +57,7 @@ export default {
     }
 }
 </script>
+
     
 <style lang="css" scoped>
     .L_sale_merchant_dps_wrap{
