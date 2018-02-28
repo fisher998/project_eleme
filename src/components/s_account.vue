@@ -43,6 +43,7 @@ export default {
         },
         exit() {
             window.localStorage.removeItem('userInfo')
+            this.$store.dispatch('exit')
             this.$router.push({path: '/mine'})
         }
     },

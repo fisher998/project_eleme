@@ -26,6 +26,9 @@ export default new Vuex.Store({
             state.tel = tel
             // console.log(state.tel)
         },
+        EXIT(state) {
+            state.tel = null
+        },
          // 添加商品
          ADDS(state, product) {
              // 是否重复添加标识
@@ -87,6 +90,9 @@ export default new Vuex.Store({
         add(state, tel) {
             //  调用mutations里的LOGIN方法
             state.commit('ADD', tel)
+        },
+        exit(state) {
+            state.commit('EXIT')
         },
         // 购物车
         adds(state, product, image) {
