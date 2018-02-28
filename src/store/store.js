@@ -13,6 +13,7 @@ export default new Vuex.Store({
     state: {
         tel: null,
         totalPrice: 0,
+        totalCount: 0,
         cartProductList: []
         // yzm
     },
@@ -27,37 +28,54 @@ export default new Vuex.Store({
         },
          // 添加商品
          ADDS(state, product) {
-            // state.totalPrice += price
-
              // 是否重复添加标识
              var is_exist = false
-
              // 判断是否添加过该商品
              for (var tempCartProduct of state.cartProductList) {
-                 if (tempCartProduct.name == product.name) {
+                 if (tempCartProduct.id == product.virtual_food_id) {
                      tempCartProduct.count++
                      is_exist = true
                      break
                  }
              }
- 
              if (!is_exist) {
                  // 构建购物车商品对象
                  var cartProduct = {
+                     id: product.virtual_food_id,
                      price: product.price,
                      name: product.name,
-                     count: 1
+                     count: 1,
+                     //============
+                     pic: product.pic
                  }
                  state.cartProductList.push(cartProduct)
              }
+
+             for (var tempCartProduct of state.cartProductList) {
+                if (tempCartProduct.id == product.virtual_food_id) {
+                    state.totalPrice += product.price
+                    state.totalCount++
+                    state.count++
+                    break
+                }
+
+            }
+            
         },
-        // ADDS(state, price) {
-        //     state.totalPrice += price
-        // },
-        // 减少方法
-        REDUCES(state, price) {
-            state.totalPrice -= price
-        }
+          // 减少商品
+          REDUCES(state, product) {
+            for (var idx in state.cartProductList) {
+                if (state.cartProductList[idx].id == product.virtual_food_id) {
+                    state.cartProductList[idx].count--
+                    state.totalPrice-= product.price
+                    state.totalCount--
+                    if (state.cartProductList[idx].count == 0) {
+                        state.cartProductList.splice(idx, 1);
+                    }
+                }
+            }
+            console.log(state.cartProductList);
+        },
         // CHANGE(state, index) {
         //     state.index = index
         // }
@@ -71,12 +89,11 @@ export default new Vuex.Store({
             state.commit('ADD', tel)
         },
         // 购物车
-        adds(state, product) {
-            // 调用mutations里的ADD方法
-            state.commit('ADDS', product)
+        adds(state, product, image) {
+            state.commit('ADDS', product, image)
         },
-        reduces(state, price) {
-            state.commit('REDUCES', price)
+        reduces(state, product) {
+            state.commit('REDUCES', product)
         }
     },
        // getters一般是返回state中数据用的
@@ -86,27 +103,13 @@ export default new Vuex.Store({
         },
         // 获取商品总数
         totalCount(state) {
-            var resultTotalCount = 0
-            for (var tempCartProduct of state.cartProductList) {
-                resultTotalCount += tempCartProduct.count
-            }
-            return resultTotalCount
+            return state.totalCount
         },
         count(state) {
-            for (var tempCartProduct of state.cartProductList) {
-                return tempCartProduct.count
-            }
+            return state.count
         },
         totalPrice(state) {
             return state.totalPrice
         },
-        // 总价格
-        totalPrice(state) {
-            var resultTotalPrice = 0
-            for (var tempCartProduct of state.cartProductList) {
-                resultTotalPrice += (tempCartProduct.count * tempCartProduct.price)
-            }
-            return resultTotalPrice
-        }
     }
 })

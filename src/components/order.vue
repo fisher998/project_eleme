@@ -4,16 +4,20 @@
             <img src="../img/s_mine_img/big_jiao.png" alt="" @click="back">
             我的优惠
         </div>
-        <div class="order_dingdan" v-for="cartProduct in cartProductList" :key="cartProduct.id">
+        <div class="order_dingdan">
             <div class="order_1">
-                <img src="../img/s_mine_img/yang.png" alt="">
-                <h3>金牌砂锅米线<span>商家正在备货</span></h3>
+                <img src="../img/s_mine_img/pic03.jpg" alt="">
+                <h3>台资味（北京宣武门店）<span>商家正在备货</span></h3>
                 <p>26秒前</p>
             </div>
             <p class="order_p"></p>
-            <div class="order_2">
-                <p>{{ cartProduct.name }} {{ cartProduct.count }}份<span>{{ cartProduct.price }} 元</span></p>
-            </div>
+            <template v-for="cartProduct in cartProductList">
+                <div class="order_2">
+                    <p>{{ cartProduct.name }} {{ cartProduct.count }}份<span>{{ cartProduct.price }} 元</span></p>
+                    <p class="order_p"></p>
+                </div>
+            </template>
+            
         </div>
     </div>
 </template>
@@ -65,7 +69,7 @@
 /* order_dingdan   */
 .order_dingdan{
     width: 100%;
-    height: 2.16rem;
+    /* height: 2.16rem; */
     background: white;
     margin-top: 0.2rem;
 }

@@ -8,7 +8,7 @@
             </div>
             <!-- 餐品列表 -->
             <div v-for="food in product.foods" :key="food.id">
-                <div class="L_diancan_list" v-for="(seafood, index) in food.specfoods" :key="seafood.id">
+                <div class="L_diancan_list" v-for="seafood in food.specfoods" :key="seafood.id">
                     <div class="L_diancan_list_img">
                         <img :src="tupian(food.image_path)" alt="商品图片">
                     </div>
@@ -22,9 +22,11 @@
                     </div>
                     <div class="L_price">
                         <h3><i>￥</i>{{ seafood.price }} <span class="L_price_span">{{ seafood.original_price | price}}</span> </h3>
-                        <img src="../img/s_mine_img/jian.png" alt="减去商品" @click="reduces(seafood, index)" class="L_price_img1" >
-                        <span class="L_price_imgSpan" >{{ idx  }}</span>
-                        <img src="../img/L_img/iconP5.jpg" alt="添加商品" @click="adds(seafood)" class="L_price_img2">
+                        <div class="l_price_div">
+                            <img src="../img/s_mine_img/jian.png" alt="减去商品" @click="reduces(seafood)" class="L_price_img1" v-if="seafood.weight >0? true:false">
+                            <span class="L_price_imgSpan" v-if="seafood.weight>0? true:false">{{ seafood.weight  }}</span>
+                            <img src="../img/L_img/iconP5.jpg" alt="添加商品" @click="adds(seafood, food.image_path)" class="L_price_img2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,28 +41,31 @@ export default {
         return {
              product: [],
              list: [],
-             idx: 0
+             idx: 0,
+             pic: null
         };
     },
     computed: {
         count() {
             return this.$store.getters.count
-        }
+        },
+        cartProductList() {
+			return this.$store.state.cartProductList
+		},
     },
      methods:{
-         adds(product) {
-                this.idx ++;
-             console.log(product.price);
-            this.$store.dispatch('adds', product)
-         },
-         reduces(product) {
-             if(this.idx <=0) {
-
-             }else{
-                this.idx --;
-                this.$store.dispatch('reduces', product.price)
-             }
-         },
+        adds(product, image) {
+            // console.log(image);
+            // console.log(product);
+            product.pic = image;
+            this.pic = image
+            product.weight++;
+            this.$store.dispatch('adds', product, image)
+        },
+        reduces(product) {
+            product.weight--;
+            this.$store.dispatch('reduces', product)
+        },
         tupian(str) {
             var first = str.substr(0, 1)
             var second = str.substr(1, 2)
@@ -87,12 +92,25 @@ export default {
     // 可以访问组件实例 `this`
         this.axios.get('http://10.0.157.249:8888/diancan')
             .then(res => {
+
+                var newStore = this.$store.state.cartProductList
+
                 for(var list of res.data) {
                     if(this.$route.params.diancan == list.name) {
-                       this.product = list;
+                        for(var obj of list.foods) {
+                            for(var food of obj.specfoods) {
+                                for(var objstore of newStore) {
+
+                                    if(obj.virtual_food_id == objstore.id) {
+                                        food.weight = objstore.count
+                                    }
+
+                                }
+                            }
+                        }
+                        this.product = list;
                     }
                      for(var prop of list.foods) {
-                        //  console.log(prop);
                         this.list = prop
                      }
                 }

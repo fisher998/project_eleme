@@ -11,6 +11,8 @@ import Find from '../components/find'
 import Mine from '../components/mine'
 import Order from '../components/order'
 import Sale from '../components/sale'
+// 结算页面
+import Sdingdan from '../components/s_dingdan'
 // 红包页面
 import SMineHeaderRedPaper from '../components/s_mine_header_redPaper'
 // 导入二级路由 s_mine_header_redPaper_red s_mine_header_redPaper_shop  红包记录和店铺代金券
@@ -72,6 +74,7 @@ export default new VueRouter({
       { path: 'shop', component: SMineHeaderRedPaperShop }
     ]},
     { path: '/order', component: Order },
+    { path: '/s_dingdan', component: Sdingdan },
     { path: '/sale', component: Sale },
     { path: '/login', component: Login , children: [
       { path: '', redirect: 'notelogin' },

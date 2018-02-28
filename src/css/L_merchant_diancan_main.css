@@ -3,7 +3,7 @@
     float: right;
     width: 5.6rem;
     margin-bottom: .2rem;
-    padding-bottom: 1.2rem;
+    padding-bottom: 2rem;
 }
 .L_diancanmain_header{       
     border-bottom:1px solid #f2f2f2;
@@ -23,6 +23,7 @@
     height: .6rem;
     line-height: .5rem;
 }
+/* L_price_img1 */
 /* 餐品列表 */
 .L_diancan_list{
   margin: .23rem 0 0 0; 
@@ -107,6 +108,17 @@
     font-style:normal;
     font-size: .16rem;
 }
+
+
+.l_price_div{
+    width: 1.5rem;
+    height: .52rem;
+    line-height: .4rem;
+    float: right;
+    margin-right: .4rem;
+    position: relative;
+    text-align: center;
+}
 .L_price_span{
     float: right;
     margin-left: .05rem;
@@ -117,15 +129,15 @@
 .L_price img{
     width: .4rem;
     height: .4rem;
-    float: left;
 }
 .L_price_img1{
-    margin:.07rem .2rem .07rem .6rem;    
-}
-.L_price_imgSpan{
-    float: left;
+    position: absolute;
+    left: 0;
+    top:0;
 }
 .L_price_img2{
-    margin:.07rem .2rem .07rem .2rem;
+    position: absolute;
+    right: 0;
+    top:0;
 }
 

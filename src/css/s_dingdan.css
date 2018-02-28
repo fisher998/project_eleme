@@ -1,0 +1,194 @@
+.dingdan{
+    width: 100%;
+    /* height: 12.5rem; */
+    background: #f5f5f5;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+.dingdan_header{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.34rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #00a8ff, #0087ff);
+}
+.dingdan_header img{
+    width: 0.2rem;
+    height: 0.34rem;
+    display: inline-block;
+    margin-right: 2.3rem;
+    margin-left: 0.2rem;
+}
+/* dingdan_addr */
+.dingdan_addr{
+    width: 100%;
+    height: 1.66rem;
+    background: white;
+    padding: .01rem;
+}
+.dingdan_addr p{
+    width: 3.1rem;
+    height: .72rem;
+    line-height: .72rem;
+    text-align: center;
+    color: #2395ff;
+    font-size: .3rem;
+    margin: .47rem 0 0 2.2rem;
+    border: .02rem solid #2395ff;
+    border-radius: .32rem .31rem;
+}
+/* dingdan_time */
+.dingdan_time{
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    background: white;
+    margin-top: .16rem;
+    color: black;
+    padding-left: .4rem;
+    font-size: .3rem;
+}
+.dingdan_time span{
+    color: #2395ff;
+    float: right;
+    margin-right: .6rem;
+}
+/* dingdan_div */
+.dingdan_div{
+    width: 100%;
+    height: .01rem;
+    background: white;
+}
+.dingdan_div p{
+    width: 6.7rem;;
+    border: .01rem dashed #eeeeee; 
+    margin-left: .4rem;
+}
+
+/* dingdan_way */
+.dingdan_way{
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    background: white;
+    color: black;
+    padding-left: .4rem;
+    font-size: .3rem;
+    margin-bottom: .16rem;
+}
+.dingdan_way span{
+    color: #2395ff;
+    float: right;
+    margin-right: .4rem;
+}
+/* dingdan_name */
+.dingdan_name{
+    width: 100%;
+    height: 1rem;
+    line-height: .88rem;
+    background: white;
+    color: black;
+    /* padding-left: .4rem; */
+    font-size: .32rem;
+    font-weight: bold;
+    padding: .01rem .01rem .01rem .4rem;
+}
+/* dingdan_div2 */
+.dingdan_div2{
+    width: 100%;
+    height: .03rem;
+    background: white;
+    margin-bottom: .06rem;
+}
+.dingdan_div2 p{
+    width: 6.7rem;;
+    border: .03rem solid #eeeeee; 
+}
+/* dingdan_div3 */
+.dingdan_div3{
+    width: 100%;
+    height: .01rem;
+  
+    background: white;
+}
+.dingdan_div3 p{
+    width: 6.7rem;;
+    border: .01rem solid #eeeeee; 
+}
+/* dingdan_food */
+.dingdan_food{
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    background: white;
+    color: black;
+    padding-left: .4rem;
+    font-size: .32rem;
+}
+.dingdan_food span{
+    float: right;
+    margin-right: .4rem;
+    /* background: pink; */
+}
+.dingdan_food img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .08rem;
+    width: .68rem;
+    height: .68rem;
+}
+.dingdan_food i{
+    margin-right: 1.8rem;
+    /* background: pink; */
+    float: right;
+}
+/* dingdan_red */
+.dingdan_red{
+    width: 100%;
+    height: 1.2rem;
+    line-height: .88rem;
+    background: white;
+    color: #bbbbbb;
+    padding-left: .4rem;
+    font-size: .28rem;
+}
+.dingdan_red span{
+    float: right;
+    margin-right: .4rem;
+}
+/* dingdan_money */
+.dingdan_money{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background: white;
+    color: black;
+    padding-left: 5.3rem;
+    font-size: .28rem;
+}
+.dingdan_money span{
+    float: right;
+    margin-right: .4rem;
+    font-size: .47rem;
+}
+/* dingdan_like */
+.dingdan_like{
+    width: 100%;
+    height: .98rem;
+    line-height: .98rem;
+    background: 
+    url(../img/s_mine_img/small.png) no-repeat 7rem center,
+    white;
+    background-size: 0.16rem 0.25rem;
+    color: black;
+    padding-left: .4rem;
+    font-size: .3rem;
+    margin: .16rem 0 .01rem 0;
+}
+.dingdan_like span{
+    float: right;
+    margin-right: .7rem;
+    color: #bbbbbb;
+    font-size: .27rem;
+}
