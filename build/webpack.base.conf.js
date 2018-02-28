@@ -15,6 +15,12 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  // 引入高德地图的配置
+  /*-----------------*/
+  externals: {
+    'AMap': 'AMap',
+  },
+  /*-----------------*/
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
