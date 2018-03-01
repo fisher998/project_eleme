@@ -2,6 +2,10 @@
     width: 100%;
     padding-left: 0.24rem;   
 }
+.s_blue{
+    background: rgb(25, 188, 238);
+    color: #fff;
+}
 .s_pingjia_main_tou{
     width: 100%;
     padding-top: 0.14rem; 
@@ -13,10 +17,10 @@
     float: left;
     width: 1.6rem;
     height: 0.56rem;
-    background: #8bb7e2;
+    /* background: #98a0a8; */
     margin: 0.15rem 0.15rem 0 0;
     line-height: 0.56rem;
     text-align: center;
     font-size: 0.27rem;
-    color: rgb(32, 21, 21);
+    /* color: rgb(160, 153, 153); */
 }

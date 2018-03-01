@@ -57,7 +57,7 @@
 }
 .s_pingjia_comment_user h5 span{
     display: inline-block;
-    width: 1.1rem;
+    width: 1.5rem;
     height: 0.47rem;
     /* line-height: 0.47resm; */
     text-align: center;
@@ -68,7 +68,7 @@
 }
 .s_pingjia_comment_user h5 span i{
     display: inline-block;
-    width: 1rem;
+    width: 1.15rem;
     margin-top: 0.03rem;
     overflow: hidden;
     white-space: nowrap;
