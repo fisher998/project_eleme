@@ -85,7 +85,7 @@ export default new VueRouter({
     { path: '/L_sale_merchant_header', component: LSaleMerchantHeader, children: [
       { path: '', redirect: 'diancan' },
       { path: 'diancan', component: LSaleMerchantDiancan, children: [
-        { path: 'name/:diancan', component: LMerchantDiancanMain },
+        { path: 'name/:dian', component: LMerchantDiancanMain },
       ]},
       { path: 'diancan', component: LSaleMerchantDiancan },
       { path: 'pingjia', component: sPingjia , children:[

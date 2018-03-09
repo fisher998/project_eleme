@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <!-- <l-sale-navlisgt-meishi></l-sale-navlisgt-meishi> -->
-
     <!-- LSaleNavlisgtMeishi> -->
     <bottom-nav v-show="isShow"></bottom-nav>
     <router-view></router-view>   
@@ -21,7 +20,6 @@ export default {
   },
   components: {
     bottomNav,
-
   },
   computed: {
     isShow() {

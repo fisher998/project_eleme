@@ -96,15 +96,13 @@ export default {
                 var newStore = this.$store.state.cartProductList
 
                 for(var list of res.data) {
-                    if(this.$route.params.diancan == list.name) {
+                    if(this.$route.params.dian == list.name) {
                         for(var obj of list.foods) {
                             for(var food of obj.specfoods) {
                                 for(var objstore of newStore) {
-
                                     if(obj.virtual_food_id == objstore.id) {
                                         food.weight = objstore.count
                                     }
-
                                 }
                             }
                         }

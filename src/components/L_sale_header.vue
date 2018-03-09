@@ -95,8 +95,6 @@
             // function onError(data) {
             //     console.log('定位失败');
             // }
-
-            
         },
         methods:{
             handleScroll () {
