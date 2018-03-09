@@ -20,13 +20,17 @@
        <div class="s_pingjia_main">
             <div class="s_pingjia_main_tou clearFloat">
                 <ul>
-                    <li v-for="(main, index) in mains" 
-                        :key="index"
-                        
-                        >
+                    <!-- <li v-for="(main, index) in mains" :key="index" @click="changeColor(index)"> -->
+                    <li v-for="(main, index) in mains" :key="index"  @click.prevent="changeColor(index)">
                         <!-- 路由传值 -->
-                         <!-- :class="colorFn + '' + index" -->
-                        <router-link :to="'/L_sale_merchant_header/pingjia/name/' + index">
+                        <!-- :class="colorFn + '' + index" -->
+                        <!-- :class="'colorFn' + index" -->
+                        <!--  @click="changeColor(index)" -->
+                        <router-link 
+                        :class="{ 's_blue' : idx == index}" 
+                     
+                        :to="'/L_sale_merchant_header/pingjia/name/' + index"
+                        >
                         {{ main.name }}({{ (main.count) }})
                         </router-link>
                     </li>
@@ -44,8 +48,13 @@ export default {
         return {
              mains: [],
              headerList: [],
-             color: 's_blue'
+             idx:0
         };
+    },
+    methods: {
+        changeColor(index) {
+            this.idx = index;
+        }
     },
     filters: {
     //保留2位小数点过滤器 不四舍五入
@@ -55,23 +64,6 @@ export default {
       return realVal;
     }
   },
-    computed: {
-        colorFn0() {
-            // return this.color = !this.color;
-            // console.log(this.color);
-            console.log(/(L_sale_merchant_header\/pingjia\/name\/0)/.test(this.$route.path));
-            return /L_sale_merchant_header\/pingjia\/name\/0/.test(this.$route.path) ? this.color : '';
-        },
-        colorFn1() {
-            return /L_sale_merchant_header\/pingjia\/name\/1/.test(this.$route.path) ? this.color : '';
-        },
-        colorFn2() {
-            return /L_sale_merchant_header\/pingjia\/name\/2/.test(this.$route.path) ? this.color : '';
-        },
-        colorFn3() {
-            return /L_sale_merchant_header\/pingjia\/name\/3/.test(this.$route.path) ? this.color : '';
-        },
-    },
     created () {
         // 四个li 满意 有图 .. .. 
         this.axios.get('http://10.0.157.249:8888/pingjia_main')
@@ -97,5 +89,23 @@ export default {
     .s_blue{
         background: rgb(25, 188, 238);
         color: #fff;
+    }
+    .s_pingjia_main_tou ul li a{
+        display: inline-block;
+        width: 1.6rem;
+        height: 0.56rem;
+    }
+    .s_pingjia_main_tou ul li:first-of-type{
+        background: #ebf5ff;
+        /* color: white; */
+    }
+     .s_pingjia_main_tou ul li:nth-of-type(2){
+        background: #ebf5ff;
+    }
+     .s_pingjia_main_tou ul li:nth-of-type(3){
+        background: #f5f5f5;
+    }
+     .s_pingjia_main_tou ul li:last-of-type{
+        background: #ebf5ff;
     }
 </style>
